@@ -1,0 +1,52 @@
+:root {
+  color-scheme: light;
+  --navy: #061a33;
+  --deep-blue: #0b2447;
+  --wine: #8a0f2e;
+  --dark-wine: #4a1024;
+  --gold: #c9a24a;
+  --paper: #f4f0ea;
+  --charcoal: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f5f3f5;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f5f3f5;
+  color: var(--charcoal);
+  font-family: var(--font-montserrat), Montserrat, system-ui, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #f3c96b;
+  outline-offset: 2px;
+}
+
+::selection {
+  background: #c9a24a;
+  color: #061a33;
+}
