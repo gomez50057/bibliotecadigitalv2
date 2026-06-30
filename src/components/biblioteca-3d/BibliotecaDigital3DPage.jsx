@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { CATEGORY_LABELS, LIBRARY_TAXONOMY, SUBCATEGORY_LABELS } from "@/config/taxonomy";
 import { libraryDocuments, pendingClassification } from "@/data/libraryDocuments";
 import { chunkBooks } from "@/utils/chunkBooks";
-import { fuzzyIncludes, normalizeText } from "@/utils/normalizeText";
+import { fuzzyIncludes, normalizeText, searchIncludes } from "@/utils/normalizeText";
 import BibliotecaDigitalLogo from "@/components/brand/BibliotecaDigitalLogo";
 import DocumentDetailPanel from "./DocumentDetailPanel";
 import LibraryHeader, { LibraryFilters } from "./LibraryHeader";
@@ -23,6 +23,28 @@ const INITIAL_FILTERS = { query: "", category: "planes", subcategory: "", year: 
 
 function latestYear(value) {
   return Math.max(...String(value).match(/\d{4}/g)?.map(Number) || [0]);
+}
+
+function documentSearchText(document) {
+  return normalizeText([
+    document.title,
+    document.categoryKey,
+    CATEGORY_LABELS[document.categoryKey],
+    document.subcategory,
+    SUBCATEGORY_LABELS[document.subcategory],
+    document.year,
+    document.booksIndex
+  ].join(" "));
+}
+
+function documentMatchesFilters(document, filters, ignoredFilters = []) {
+  const ignored = new Set(ignoredFilters);
+  const query = normalizeText(filters.query);
+
+  return (ignored.has("query") || !query || fuzzyIncludes(documentSearchText(document), query))
+    && (ignored.has("category") || !filters.category || document.categoryKey === filters.category)
+    && (ignored.has("subcategory") || !filters.subcategory || document.subcategory === filters.subcategory)
+    && (ignored.has("year") || !filters.year || document.year === filters.year);
 }
 
 export default function BibliotecaDigital3DPage() {
@@ -72,30 +94,39 @@ export default function BibliotecaDigital3DPage() {
     setPage(0);
   }, [filters]);
 
-  const years = useMemo(
-    () => [...new Set(libraryDocuments.map((document) => document.year))].sort((a, b) => latestYear(b) - latestYear(a)),
-    []
+  const isSearching = Boolean(filters.query.trim());
+
+  const categoryOptions = useMemo(
+    () => CATEGORY_KEYS.filter((category) =>
+      libraryDocuments.some((document) =>
+        document.categoryKey === category && documentMatchesFilters(document, filters, ["category", "query"])
+      )
+    ),
+    [filters]
   );
 
-  const subcategoryOptions = LIBRARY_TAXONOMY[filters.category];
+  const subcategoryOptions = useMemo(
+    () => (LIBRARY_TAXONOMY[filters.category] || []).filter((subcategory) =>
+      libraryDocuments.some((document) =>
+        document.subcategory === subcategory && documentMatchesFilters(document, filters, ["subcategory", "query"])
+      )
+    ),
+    [filters]
+  );
+
+  const years = useMemo(
+    () => [...new Set(libraryDocuments
+      .filter((document) => documentMatchesFilters(document, filters, ["year", "query"]))
+      .map((document) => document.year))]
+      .sort((a, b) => latestYear(b) - latestYear(a)),
+    [filters]
+  );
 
   const filtered = useMemo(() => {
     const query = normalizeText(filters.query);
     const result = libraryDocuments.filter((document) => {
-      const haystack = normalizeText([
-        document.title,
-        document.categoryKey,
-        CATEGORY_LABELS[document.categoryKey],
-        document.subcategory,
-        SUBCATEGORY_LABELS[document.subcategory],
-        document.year,
-        document.description,
-        document.booksIndex
-      ].join(" "));
-      return (!query || fuzzyIncludes(haystack, query))
-        && (!filters.category || document.categoryKey === filters.category)
-        && (!filters.subcategory || document.subcategory === filters.subcategory)
-        && (!filters.year || document.year === filters.year);
+      if (query) return searchIncludes(documentSearchText(document), query);
+      return documentMatchesFilters(document, filters);
     });
     return [...result].sort((a, b) => {
       if (filters.order === "title") return a.title.localeCompare(b.title, "es");
@@ -104,12 +135,48 @@ export default function BibliotecaDigital3DPage() {
     });
   }, [filters]);
 
+  useEffect(() => {
+    if (filters.query.trim()) return;
+    setFilters((current) => {
+      const nextCategoryOptions = CATEGORY_KEYS.filter((category) =>
+        libraryDocuments.some((document) =>
+          document.categoryKey === category && documentMatchesFilters(document, current, ["category"])
+        )
+      );
+      const nextCategory = !current.category || nextCategoryOptions.includes(current.category)
+        ? current.category
+        : nextCategoryOptions[0] || "";
+      const categoryFilters = { ...current, category: nextCategory };
+      const nextSubcategoryOptions = (LIBRARY_TAXONOMY[nextCategory] || []).filter((subcategory) =>
+        libraryDocuments.some((document) =>
+          document.subcategory === subcategory && documentMatchesFilters(document, categoryFilters, ["subcategory"])
+        )
+      );
+      const nextSubcategory = !current.subcategory || nextSubcategoryOptions.includes(current.subcategory)
+        ? current.subcategory
+        : "";
+      const nextYearOptions = libraryDocuments
+        .filter((document) => documentMatchesFilters(document, { ...categoryFilters, subcategory: nextSubcategory }, ["year"]))
+        .map((document) => document.year);
+      const nextYear = !current.year || nextYearOptions.includes(current.year) ? current.year : "";
+
+      if (nextCategory === current.category && nextSubcategory === current.subcategory && nextYear === current.year) {
+        return current;
+      }
+
+      return { ...current, category: nextCategory, subcategory: nextSubcategory, year: nextYear };
+    });
+  }, [filters.query, filters.category, filters.subcategory, filters.year]);
+
   const activeDocuments = useMemo(
-    () => filtered.filter((document) =>
-      document.categoryKey === activeCategory
-      && (!activeSubcategory || document.subcategory === activeSubcategory)
-    ),
-    [filtered, activeCategory, activeSubcategory]
+    () => {
+      if (isSearching) return filtered;
+      return filtered.filter((document) =>
+        document.categoryKey === activeCategory
+        && (!activeSubcategory || document.subcategory === activeSubcategory)
+      );
+    },
+    [filtered, activeCategory, activeSubcategory, isSearching]
   );
 
   const show3D = render3D && !accessibleMode && !compactMode;
@@ -148,6 +215,39 @@ export default function BibliotecaDigital3DPage() {
     }
     url.searchParams.set("doc", document.id);
     window.history.replaceState(null, "", url);
+  };
+
+  const autocompleteDocuments = useMemo(
+    () => libraryDocuments.map((document) => ({
+      ...document,
+      searchText: documentSearchText(document)
+    })),
+    []
+  );
+
+  const showSearchDocument = (document) => {
+    const searchFilters = {
+      ...filters,
+      query: document.title,
+      category: document.categoryKey,
+      subcategory: "",
+      year: ""
+    };
+    const query = normalizeText(document.title);
+    const searchResults = libraryDocuments
+      .filter((item) => searchIncludes(documentSearchText(item), query))
+      .sort((a, b) => {
+        if (searchFilters.order === "title") return a.title.localeCompare(b.title, "es");
+        if (searchFilters.order === "oldest") return latestYear(a.year) - latestYear(b.year);
+        return latestYear(b.year) - latestYear(a.year);
+      });
+    const documentIndex = Math.max(0, searchResults.findIndex((item) => item.id === document.id));
+
+    setActiveCategory(document.categoryKey);
+    setActiveSubcategory("");
+    setFilters(searchFilters);
+    setPage(Math.floor(documentIndex / pageSize));
+    selectDocument(document);
   };
 
   const closeDocument = () => {
@@ -246,16 +346,17 @@ export default function BibliotecaDigital3DPage() {
         <LibraryFilters
           filters={filters}
           setFilters={setFilters}
-          categoryOptions={CATEGORY_KEYS}
+          categoryOptions={categoryOptions}
           subcategoryOptions={subcategoryOptions}
           years={years}
           onQuickFilter={quickFilter}
-          autocompleteTitles={libraryDocuments.map((document) => document.title)}
+          autocompleteDocuments={autocompleteDocuments}
+          onSearchSelect={showSearchDocument}
           activeFilterCount={activeFilterCount}
         />
 
         <nav className={styles.categoryRail} aria-label="Categorías del acervo">
-          {CATEGORY_KEYS.map((category, index) => (
+          {categoryOptions.map((category, index) => (
             <button
               key={category}
               className={activeCategory === category ? styles.categoryActive : ""}
@@ -274,7 +375,7 @@ export default function BibliotecaDigital3DPage() {
           >
             Todas
           </button>
-          {LIBRARY_TAXONOMY[activeCategory].map((subcategory) => (
+          {subcategoryOptions.map((subcategory) => (
             <button
               key={subcategory}
               className={activeSubcategory === subcategory ? styles.subcategoryActive : ""}

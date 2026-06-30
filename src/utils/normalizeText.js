@@ -40,3 +40,26 @@ export function fuzzyIncludes(value = "", query = "") {
     .filter(Boolean)
     .every((term) => words.some((word) => closeEnough(term, word)));
 }
+
+export function searchIncludes(value = "", query = "") {
+  const normalizedQuery = normalizeText(query);
+  const normalizedValue = normalizeText(value);
+  if (!normalizedQuery) return true;
+  if (normalizedValue.includes(normalizedQuery)) return true;
+  const words = normalizedValue.split(/\s+/).filter(Boolean);
+  return normalizedQuery
+    .split(/\s+/)
+    .filter(Boolean)
+    .every((term) => words.some((word) => searchTermMatches(term, word)));
+}
+
+function searchTermMatches(term, word) {
+  if (word.includes(term) || term.includes(word)) return true;
+  if (term.length < 3 || word.length < 3) return false;
+  if (term[0] !== word[0]) return false;
+  if (Math.abs(term.length - word.length) > 2) return false;
+  if (term.length === 3) return distance(term, word) <= 1;
+
+  const allowedDistance = term.length <= 5 ? 2 : Math.max(2, Math.floor(term.length * 0.25));
+  return distance(term, word) <= allowedDistance;
+}

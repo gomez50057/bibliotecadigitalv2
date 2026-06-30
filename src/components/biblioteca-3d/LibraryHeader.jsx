@@ -1,6 +1,6 @@
 ﻿import BibliotecaDigitalLogo from "@/components/brand/BibliotecaDigitalLogo";
 import { CATEGORY_LABELS, SUBCATEGORY_LABELS } from "@/config/taxonomy";
-import { fuzzyIncludes, normalizeText } from "@/utils/normalizeText";
+import { normalizeText, searchIncludes } from "@/utils/normalizeText";
 import styles from "./BibliotecaDigital3D.module.css";
 
 export default function LibraryHeader({
@@ -30,14 +30,15 @@ export function LibraryFilters({
   subcategoryOptions,
   years,
   onQuickFilter,
-  autocompleteTitles,
+  autocompleteDocuments,
+  onSearchSelect,
   activeFilterCount
 }) {
   const query = normalizeText(filters.query);
   const filterLabel = `${activeFilterCount} ${activeFilterCount === 1 ? "filtro activo" : "filtros activos"}`;
   const suggestions = query
-    ? autocompleteTitles
-      .filter((title) => fuzzyIncludes(title, query) && normalizeText(title) !== query)
+    ? autocompleteDocuments
+      .filter((document) => searchIncludes(document.searchText, query) && normalizeText(document.title) !== query)
       .slice(0, 7)
     : [];
   const update = (key) => (event) => setFilters((current) => ({
@@ -64,14 +65,15 @@ export function LibraryFilters({
         </label>
         {suggestions.length > 0 && (
           <div className={styles.autocompleteList} role="listbox" aria-label="Sugerencias de documentos">
-            {suggestions.map((title) => (
+            {suggestions.map((document) => (
               <button
-                key={title}
+                key={document.id}
                 type="button"
                 role="option"
-                onMouseDown={() => setFilters((current) => ({ ...current, query: title }))}
+                onMouseDown={() => onSearchSelect(document)}
               >
-                {title}
+                <strong>{document.title}</strong>
+                <span>{CATEGORY_LABELS[document.categoryKey]} - {SUBCATEGORY_LABELS[document.subcategory]} - {document.year}</span>
               </button>
             ))}
           </div>
