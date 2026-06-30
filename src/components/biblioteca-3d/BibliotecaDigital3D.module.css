@@ -746,8 +746,8 @@
 
 .lightBooks {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
   height: 100%;
   padding: 28px;
   overflow: auto;
@@ -755,33 +755,62 @@
 }
 
 .lightBooks > button {
-  display: grid;
-  gap: 9px;
+  display: block;
   padding: 0;
   border: 0;
   background: transparent;
-  color: #2f252a;
+  color: #fff;
   cursor: pointer;
   text-align: left;
 }
 
 .lightBooks .mobileBookCover {
   width: 100%;
-  height: 210px;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 28px;
+  border: 0;
+  border-radius: 4px 16px 16px 4px;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.26), transparent 10%),
+    radial-gradient(circle at 82% 8%, rgba(255, 255, 255, 0.18), transparent 34%),
+    var(--book-color);
+  box-shadow: 12px 18px 34px rgba(21, 20, 19, 0.22);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.lightBooks > button:hover .mobileBookCover {
+  transform: translateY(-3px);
+  box-shadow: 14px 22px 38px rgba(21, 20, 19, 0.28);
+}
+
+.lightBookLogo {
+  width: 58px;
 }
 
 .lightBooks strong {
+  display: -webkit-box;
   overflow: hidden;
-  color: #2f252a;
-  font-size: 0.78rem;
-  line-height: 1.35;
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.16;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .lightBooks small {
-  color: #7d1735;
-  font-size: 0.7rem;
+  margin-top: auto;
+  margin-bottom: 14px;
+  color: #eed28d;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .compactTable {
@@ -1001,22 +1030,85 @@
   }
 
   .lightBooks {
-    grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
-    align-items: start;
-    padding: 20px 14px 82px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    align-items: stretch;
+    padding: 16px 12px 82px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #f5f3f5;
+    scroll-snap-type: none;
   }
 
   .lightBooks .mobileBookCover {
-    height: 170px;
+    aspect-ratio: auto;
+    min-height: 248px;
+    height: auto;
+    padding: 18px 16px;
+  }
+
+  .lightBooks strong {
+    font-size: 0.82rem;
+    line-height: 1.18;
+    -webkit-line-clamp: unset;
+  }
+
+  .lightBooks small {
+    margin-bottom: 10px;
+    font-size: 0.56rem;
+  }
+
+  .lightBookLogo {
+    width: 40px;
   }
 
   .compactTable {
-    padding: 10px;
+    padding: 12px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .compactTable table {
-    width: 780px;
+    width: 100%;
     font-size: 0.72rem;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    background: transparent;
+  }
+
+  .compactTable thead {
+    display: none;
+  }
+
+  .compactTable tbody,
+  .compactTable tr,
+  .compactTable td {
+    display: block;
+    width: 100%;
+  }
+
+  .compactTable tr {
+    padding: 12px;
+    border: 1px solid #e5dde1;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .compactTable td {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 10px;
+    border-bottom: 0;
+  }
+
+  .compactTable td::before {
+    content: attr(data-label);
+    color: #7d1735;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
   .compactTable th,
@@ -1025,7 +1117,19 @@
   }
 
   .compactTable td:first-child {
-    min-width: 220px;
+    min-width: 0;
+  }
+
+  .compactTable td:last-child {
+    display: grid;
+  }
+
+  .compactTable td:last-child > button,
+  .compactTable td:last-child > a {
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 6px;
+    margin-bottom: 6px;
   }
 
   .mobileBooks > button {
@@ -1039,6 +1143,19 @@
     cursor: pointer;
     text-align: left;
     scroll-snap-align: center;
+  }
+
+  .mobileBooks.lightBooks > button {
+    display: block;
+    flex: initial;
+    scroll-snap-align: none;
+  }
+
+  .mobileBooks.lightBooks strong {
+    display: block;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
   }
 
   .mobileBookCover {

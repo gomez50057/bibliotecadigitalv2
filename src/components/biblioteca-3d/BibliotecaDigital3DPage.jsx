@@ -7,6 +7,7 @@ import { CATEGORY_LABELS, LIBRARY_TAXONOMY, SUBCATEGORY_LABELS } from "@/config/
 import { libraryDocuments, pendingClassification } from "@/data/libraryDocuments";
 import { chunkBooks } from "@/utils/chunkBooks";
 import { fuzzyIncludes, normalizeText } from "@/utils/normalizeText";
+import BibliotecaDigitalLogo from "@/components/brand/BibliotecaDigitalLogo";
 import DocumentDetailPanel from "./DocumentDetailPanel";
 import LibraryHeader, { LibraryFilters } from "./LibraryHeader";
 import Loading3D from "./Loading3D";
@@ -36,13 +37,22 @@ export default function BibliotecaDigital3DPage() {
   const searchRef = useRef(null);
   const tooltipPortal = useRef(null);
 
+  const clearDocumentUrl = () => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("doc");
+    window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  };
+
   useEffect(() => {
     const onKeyDown = (event) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
         document.querySelector('input[type="search"]')?.focus();
       }
-      if (event.key === "Escape") setSelectedDocument(null);
+      if (event.key === "Escape") {
+        setSelectedDocument(null);
+        clearDocumentUrl();
+      }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -127,9 +137,7 @@ export default function BibliotecaDigital3DPage() {
 
   const closeDocument = () => {
     setSelectedDocument(null);
-    const url = new URL(window.location.href);
-    url.searchParams.delete("doc");
-    window.history.replaceState(null, "", url);
+    clearDocumentUrl();
   };
 
   const copyCitation = async (document) => {
@@ -290,11 +298,11 @@ export default function BibliotecaDigital3DPage() {
                 <tbody>
                   {visibleDocuments.map((document) => (
                     <tr key={document.id}>
-                      <td>{document.title}</td>
-                      <td>{CATEGORY_LABELS[document.categoryKey]}</td>
-                      <td>{SUBCATEGORY_LABELS[document.subcategory]}</td>
-                      <td>{document.year}</td>
-                      <td>
+                      <td data-label="Título">{document.title}</td>
+                      <td data-label="Categoría">{CATEGORY_LABELS[document.categoryKey]}</td>
+                      <td data-label="Subcategoría">{SUBCATEGORY_LABELS[document.subcategory]}</td>
+                      <td data-label="Año">{document.year}</td>
+                      <td data-label="Acciones">
                         <button type="button" onClick={() => selectDocument(document)}>Ver</button>
                         <a href={document.url} target="_blank" rel="noreferrer">Abrir</a>
                         <button type="button" onClick={() => copyCitation(document)}>Cita</button>
@@ -310,9 +318,11 @@ export default function BibliotecaDigital3DPage() {
             <div className={`${styles.mobileBooks} ${!show3D ? styles.lightBooks : ""}`} aria-label="Libros visibles">
               {visibleDocuments.map((document) => (
                 <button key={document.id} onClick={() => selectDocument(document)}>
-                  <span className={styles.mobileBookCover} style={{ "--book-color": document.colorVariant }} />
-                  <strong>{document.shortTitle}</strong>
-                  <small>{document.year}</small>
+                  <span className={styles.mobileBookCover} style={{ "--book-color": document.colorVariant }}>
+                    <BibliotecaDigitalLogo compact className={styles.lightBookLogo} />
+                    <small>{document.year}</small>
+                    <strong title={document.title}>{document.title}</strong>
+                  </span>
                 </button>
               ))}
             </div>
