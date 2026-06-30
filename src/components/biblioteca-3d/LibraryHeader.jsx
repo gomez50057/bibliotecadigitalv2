@@ -4,7 +4,9 @@ import { fuzzyIncludes, normalizeText } from "@/utils/normalizeText";
 import styles from "./BibliotecaDigital3D.module.css";
 
 export default function LibraryHeader({
-  total
+  total,
+  totalGeneral,
+  activeFilterCount
 }) {
   return (
     <header className={styles.header}>
@@ -13,7 +15,8 @@ export default function LibraryHeader({
         <BibliotecaDigitalLogo compact className={styles.mobileLogo} />
         <div>
           <p>Gobierno del Estado de Hidalgo</p>
-          <span>{total} documentos institucionales</span>
+          <span>{totalGeneral} documentos institucionales</span>
+          {activeFilterCount > 0 && <small>{total} visibles con filtros</small>}
         </div>
       </div>
     </header>
@@ -27,9 +30,11 @@ export function LibraryFilters({
   subcategoryOptions,
   years,
   onQuickFilter,
-  autocompleteTitles
+  autocompleteTitles,
+  activeFilterCount
 }) {
   const query = normalizeText(filters.query);
+  const filterLabel = `${activeFilterCount} ${activeFilterCount === 1 ? "filtro activo" : "filtros activos"}`;
   const suggestions = query
     ? autocompleteTitles
       .filter((title) => fuzzyIncludes(title, query) && normalizeText(title) !== query)
@@ -92,6 +97,7 @@ export function LibraryFilters({
         </div>
 
         <div className={styles.chips} aria-label="Filtros rápidos">
+          <span className={styles.filterCount}>{filterLabel}</span>
           <button className={filters.order === "recent" ? styles.chipActive : ""} onClick={() => onQuickFilter("recent")}>Más recientes</button>
           {["nacional", "estatal", "municipal"].map((key) => (
             <button
@@ -102,7 +108,7 @@ export function LibraryFilters({
               {SUBCATEGORY_LABELS[key]}
             </button>
           ))}
-          <button onClick={() => onQuickFilter("clear")}>Limpiar filtros</button>
+          <button disabled={!activeFilterCount} onClick={() => onQuickFilter("clear")}>Limpiar filtros</button>
         </div>
       </div>
     </div>

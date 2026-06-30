@@ -114,6 +114,21 @@ export default function BibliotecaDigital3DPage() {
 
   const show3D = render3D && !accessibleMode && !compactMode;
   const showCompact = compactMode;
+  const activeFilterCount = [
+    filters.query.trim(),
+    filters.category,
+    filters.subcategory,
+    filters.year,
+    filters.order !== INITIAL_FILTERS.order
+  ].filter(Boolean).length;
+  const activeFilterText = `${activeFilterCount} ${activeFilterCount === 1 ? "filtro activo puede" : "filtros activos pueden"}`;
+  const categoryCounts = useMemo(
+    () => CATEGORY_KEYS.map((category) => ({
+      key: category,
+      total: libraryDocuments.filter((document) => document.categoryKey === category).length
+    })),
+    []
+  );
   // ponytail: one page is one two-shelf block; mobile keeps the lighter list.
   const pageSize = showCompact ? 50 : show3D ? 20 : 18;
   const pages = useMemo(() => chunkBooks(activeDocuments, pageSize), [activeDocuments, pageSize]);
@@ -186,6 +201,8 @@ export default function BibliotecaDigital3DPage() {
     <main className={styles.page} ref={searchRef}>
       <LibraryHeader
         total={filtered.length}
+        totalGeneral={libraryDocuments.length}
+        activeFilterCount={activeFilterCount}
       />
 
       <section className={styles.libraryShell}>
@@ -234,6 +251,7 @@ export default function BibliotecaDigital3DPage() {
           years={years}
           onQuickFilter={quickFilter}
           autocompleteTitles={libraryDocuments.map((document) => document.title)}
+          activeFilterCount={activeFilterCount}
         />
 
         <nav className={styles.categoryRail} aria-label="Categorías del acervo">
@@ -332,7 +350,15 @@ export default function BibliotecaDigital3DPage() {
             <div className={styles.emptyState}>
               <span>⌕</span>
               <h2>No hay documentos en este estante</h2>
-              <p>Prueba otra categoría, subcategoría o limpia los filtros.</p>
+              <p>{activeFilterCount ? `${activeFilterText} estar limitando la vista.` : "Prueba otra categoría con documentos disponibles."}</p>
+              {activeFilterCount > 0 && <button type="button" onClick={() => quickFilter("clear")}>Limpiar filtros</button>}
+              <div className={styles.emptyCategories}>
+                {categoryCounts.filter((category) => category.total > 0).map((category) => (
+                  <button key={category.key} type="button" onClick={() => chooseCategory(category.key)}>
+                    {CATEGORY_LABELS[category.key]} <b>{category.total}</b>
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 
