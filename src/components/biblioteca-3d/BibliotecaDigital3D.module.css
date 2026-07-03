@@ -4,7 +4,6 @@
   background:
     radial-gradient(circle at 75% 12%, rgba(201, 162, 74, 0.12), transparent 28rem),
     #f5f3f5;
-  color: #271b20;
 }
 
 .header {
@@ -23,9 +22,41 @@
   gap: 22px;
 }
 
-.brandBlock p,
-.brandBlock span,
-.brandBlock small {
+.headerNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.headerNav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 11px;
+  border: 1px solid #d8cbd0;
+  border-radius: 8px;
+  background: #fff;
+  color: #7d1735;
+  font-size: 0.68rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.headerNav a:hover {
+  border-color: #8a0f2e;
+  background: rgba(138, 15, 46, 0.08);
+}
+
+.headerNav a.navActive {
+  border-color: #8a0f2e;
+  background: #8a0f2e;
+  color: #fff;
+}
+
+.brandBlock > div p,
+.brandBlock > div span,
+.brandBlock > div small {
   margin: 0;
   color: #5e5257;
   font-size: 0.7rem;
@@ -33,14 +64,14 @@
   text-transform: uppercase;
 }
 
-.brandBlock span {
+.brandBlock > div span {
   display: block;
   margin-top: 7px;
   color: #7d1735;
   font-size: 0.65rem;
 }
 
-.brandBlock small {
+.brandBlock > div small {
   display: block;
   margin-top: 5px;
   color: #8a7d82;
@@ -222,8 +253,8 @@
 .filterCount {
   padding: 6px 10px;
   border-radius: 999px;
-  background: #10243b;
-  color: #fff;
+  background: #fff8e8;
+  color: #7d1735;
   font-size: 0.67rem;
   font-weight: 800;
 }
@@ -400,13 +431,20 @@
 .sceneFrame {
   position: relative;
   z-index: 5;
-  height: min(690px, 66vh);
-  min-height: 560px;
+  height: 1220px;
+  min-height: 1220px;
   overflow: visible;
   border: 0;
   border-radius: 0;
   background: #f5f3f5;
   box-shadow: none;
+}
+
+.listSceneFrame {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 0;
 }
 
 .canvas {
@@ -452,34 +490,31 @@
 .pagination {
   position: absolute;
   z-index: 4;
-  right: 18px;
-  bottom: 18px;
+  inset: -240px 0 0;
   display: flex;
   align-items: center;
-  gap: 9px;
-  padding: 7px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 9px;
-  background: rgba(3, 14, 27, 0.8);
-  backdrop-filter: blur(10px);
+  justify-content: space-between;
+  padding: 0 24px;
+  pointer-events: none;
 }
 
 .pagination button {
+  pointer-events: auto;
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 30px;
+  width: 58px;
+  height: 58px;
   border: 1px solid rgba(201, 162, 74, 0.32);
-  border-radius: 6px;
-  background: rgba(201, 162, 74, 0.12);
-  color: #f0d387;
+  border-radius: 999px;
+  background: rgba(255, 252, 246, 0.9);
+  color: #7d1735;
+  box-shadow: 0 10px 26px rgba(69, 43, 20, 0.12);
   cursor: pointer;
 }
 
-.paginationIcon,
-.closeIcon {
-  width: 18px;
-  height: 18px;
+.paginationIcon {
+  width: 26px;
+  height: 26px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
@@ -493,10 +528,46 @@
 }
 
 .pagination span {
-  min-width: 100px;
-  color: #b7c2ce;
+  position: absolute;
+  left: 50%;
+  bottom: 260px;
+  min-width: 118px;
+  padding: 7px 12px;
+  border: 1px solid rgba(201, 162, 74, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 252, 246, 0.9);
+  color: #6f2637;
   font-size: 0.65rem;
   text-align: center;
+  transform: translateX(-50%);
+}
+
+.listPagination {
+  position: static;
+  align-self: flex-end;
+  justify-content: flex-end;
+  gap: 8px;
+  width: auto;
+  margin: 12px 18px 18px;
+  padding: 6px;
+  border: 1px solid rgba(201, 162, 74, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 252, 246, 0.94);
+  pointer-events: auto;
+}
+
+.listPagination button {
+  width: 38px;
+  height: 38px;
+}
+
+.listPagination span {
+  position: static;
+  min-width: 104px;
+  padding: 0 6px;
+  border: 0;
+  background: transparent;
+  transform: none;
 }
 
 .loader,
@@ -509,8 +580,8 @@
   align-items: center;
   justify-content: center;
   gap: 14px;
-  background: #07182b;
-  color: #c9a24a;
+  background: #f5f3f5;
+  color: #7d1735;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -518,7 +589,7 @@
 
 .emptyState {
   z-index: 5;
-  background: radial-gradient(circle, #102c47, #07182b 68%);
+  background: #f5f3f5;
 }
 
 .emptyState > span {
@@ -593,14 +664,27 @@
   z-index: 3;
   top: 18px;
   right: 18px;
+  display: grid;
+  place-items: center;
   width: 38px;
   height: 38px;
+  padding: 0;
   border: 1px solid rgba(17, 24, 39, 0.18);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.62);
   color: #111827;
   cursor: pointer;
-  font-size: 1.5rem;
+}
+
+.closeIcon {
+  display: block;
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .cover {
@@ -618,6 +702,13 @@
     var(--book-color);
   color: #fff;
   box-shadow: 12px 18px 35px rgba(21, 20, 19, 0.25);
+}
+
+.coverLogo {
+  --logo-height: 21px;
+  --logo-gap: 5px;
+  --logo-max-width: 140px;
+  align-self: flex-start;
 }
 
 .cover > span {
@@ -774,7 +865,7 @@
   overflow: auto;
   clip: auto;
   white-space: normal;
-  background: #061a33;
+  background: #f5f3f5;
 }
 
 .accessibleList button {
@@ -818,6 +909,10 @@
   background: #f5f3f5;
 }
 
+.listSceneFrame .lightBooks {
+  height: auto;
+}
+
 .lightBooks > button {
   display: block;
   padding: 0;
@@ -852,7 +947,10 @@
 }
 
 .lightBookLogo {
-  width: 58px;
+  --logo-height: 17px;
+  --logo-gap: 4px;
+  --logo-max-width: 104px;
+  width: auto;
 }
 
 .lightBooks strong {
@@ -878,7 +976,7 @@
 }
 
 .compactTable {
-  height: 100%;
+  height: auto;
   max-width: 100%;
   overflow: auto;
   padding: 18px;
@@ -937,15 +1035,6 @@
   text-decoration: none;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 12px clamp(24px, 4.5vw, 76px) 30px;
-  color: #6b5e64;
-  font-size: 0.63rem;
-}
-
 @media (max-width: 1040px) {
   .brandBlock {
     justify-content: space-between;
@@ -961,7 +1050,13 @@
   }
 
   .sceneFrame {
-    height: 610px;
+    height: 1080px;
+    min-height: 940px;
+  }
+
+  .listSceneFrame {
+    height: auto;
+    min-height: 0;
   }
 
   .detailPanel {
@@ -994,14 +1089,20 @@
   }
 
   .mobileLogo {
-    display: inline-block !important;
+    display: inline-flex !important;
   }
 
   .brandBlock {
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
-  .brandBlock p {
+  .headerNav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .brandBlock > div p {
     font-size: 0.62rem;
   }
 
@@ -1075,6 +1176,11 @@
     min-height: 440px;
   }
 
+  .listSceneFrame {
+    height: auto;
+    min-height: 0;
+  }
+
   .canvas {
     display: none !important;
   }
@@ -1124,7 +1230,12 @@
   }
 
   .lightBookLogo {
-    width: 40px;
+    --logo-height: 15px;
+    --logo-gap: 3px;
+    --logo-max-width: 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
   }
 
   .compactTable {
@@ -1253,8 +1364,34 @@
   }
 
   .pagination {
-    right: 10px;
-    bottom: 10px;
+    inset: auto 10px 6px;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px;
+    border: 1px solid rgba(201, 162, 74, 0.24);
+    border-radius: 999px;
+    background: rgba(255, 252, 246, 0.92);
+    pointer-events: auto;
+  }
+
+  .pagination button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .pagination span {
+    position: static;
+    min-width: 96px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    transform: none;
+  }
+
+  .listPagination {
+    justify-content: flex-end;
+    width: auto;
+    margin: 10px 10px 12px;
   }
 
   .detailPanel {
@@ -1271,17 +1408,19 @@
     padding: 20px;
   }
 
+  .coverLogo {
+    --logo-height: 16px;
+    --logo-gap: 4px;
+    --logo-max-width: 58px;
+    flex-direction: column;
+  }
+
   .cover strong {
     font-size: 0.92rem;
   }
 
   .panelActions {
     grid-template-columns: 1fr;
-  }
-
-  .footer {
-    flex-direction: column;
-    padding-inline: 16px;
   }
 }
 

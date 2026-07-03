@@ -11,19 +11,19 @@ import {
   useTexture
 } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Suspense, useMemo, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { CATEGORY_LABELS, SUBCATEGORY_LABELS } from "@/config/taxonomy";
 import styles from "./BibliotecaDigital3D.module.css";
 
-const SHELF_Y = [0.95, -1.45];
-const BOOKS_PER_SHELF = 10;
+const SHELF_Y = [3.05, -5.35];
+const BOOKS_PER_SHELF = 12;
 const WOOD = "/textures/wood/walnut-premium.webp";
-const SHELF_SUPPORT_X = [-4.15, 4.15];
-const BOOK_WIDTHS = [0.72, 0.82, 0.76, 0.88, 0.74];
-const BOOK_HEIGHTS = [1.62, 1.78, 1.68, 1.86, 1.72, 1.66];
+const SHELF_SUPPORT_X = [-10.65, 10.65];
+const BOOK_WIDTHS = [1.43, 1.62, 1.52, 1.73, 1.45];
+const BOOK_HEIGHTS = [6.1, 6.71, 6.34, 7.02, 6.49, 6.27];
 const BOOK_ROTATIONS = [-0.018, 0.008, 0, 0.014, -0.01, 0.018];
-const BOOK_COLORS = ["#13283b", "#f2efe7", "#27333c", "#7d1735", "#394f51", "#6f6252"];
+const BOOK_COLORS = ["#566456", "#f2efe7", "#6b5d4b", "#7d1735", "#4f665b", "#9a805f"];
 const PAGE_LINE_OFFSETS = [-0.3, -0.18, -0.06, 0.06, 0.18, 0.3];
 
 function useTiledTexture(src, repeatX, repeatY, colorSpace = THREE.SRGBColorSpace) {
@@ -63,8 +63,8 @@ function useBookTexture() {
 }
 
 function StaticShelves({ activeCategory, documents }) {
-  const woodMap = useTiledTexture(WOOD, 3.6, 1);
-  const woodBump = useTiledTexture(WOOD, 3.6, 1, THREE.NoColorSpace);
+  const woodMap = useTiledTexture(WOOD, 4.4, 1);
+  const woodBump = useTiledTexture(WOOD, 4.4, 1, THREE.NoColorSpace);
   const woodProps = { map: woodMap, bumpMap: woodBump, bumpScale: 0.04, roughness: 0.42, metalness: 0.02 };
 
   return (
@@ -82,7 +82,7 @@ function StaticShelves({ activeCategory, documents }) {
           : "Disponible";
         return (
           <group key={shelfY}>
-            <RoundedBox position={[0, shelfY - 0.44, 0.52]} args={[9.9, 0.26, 1.1]} radius={0.035} smoothness={3} castShadow receiveShadow>
+            <RoundedBox position={[0, shelfY - 0.44, 0.52]} args={[24, 0.38, 1.26]} radius={0.035} smoothness={3} castShadow receiveShadow>
               <meshStandardMaterial
                 {...woodProps}
                 color={active ? "#af7955" : "#9d6b4d"}
@@ -90,7 +90,7 @@ function StaticShelves({ activeCategory, documents }) {
               />
             </RoundedBox>
             <mesh position={[0, shelfY - 0.29, 0.98]}>
-              <boxGeometry args={[9.65, 0.025, 0.035]} />
+              <boxGeometry args={[23.5, 0.04, 0.052]} />
               <meshStandardMaterial color="#b69352" metalness={0.6} roughness={0.34} />
             </mesh>
             {SHELF_SUPPORT_X.map((x) => (
@@ -98,17 +98,17 @@ function StaticShelves({ activeCategory, documents }) {
                 <BrassMaterial roughness={0.34} />
               </RoundedBox>
             ))}
-            <RoundedBox position={[-5.5, shelfY + 0.14, 0.72]} args={[1.58, 0.58, 0.09]} radius={0.035} smoothness={3} castShadow>
+            <RoundedBox position={[0, shelfY + 7.4, 1.02]} args={[8.1, 1.3, 0.11]} radius={0.035} smoothness={3} castShadow>
               <meshStandardMaterial color="#e8e1d3" roughness={0.76} metalness={0.01} />
             </RoundedBox>
-            <RoundedBox position={[-5.5, shelfY + 0.14, 0.785]} args={[1.42, 0.43, 0.045]} radius={0.02} smoothness={3} castShadow>
+            <RoundedBox position={[0, shelfY + 7.4, 1.105]} args={[7.45, 0.98, 0.055]} radius={0.02} smoothness={3} castShadow>
               <meshStandardMaterial color={active ? "#7d1735" : "#554b50"} roughness={0.72} metalness={0.01} />
             </RoundedBox>
             <Text
-              position={[-5.5, shelfY + 0.22, 0.824]}
-              fontSize={0.138}
+              position={[0, shelfY + 7.55, 1.15]}
+              fontSize={0.34}
               color="#fff8e8"
-              maxWidth={1.16}
+              maxWidth={6.35}
               anchorX="center"
               anchorY="middle"
               outlineWidth={0.002}
@@ -117,10 +117,10 @@ function StaticShelves({ activeCategory, documents }) {
               {categoryLabel.toUpperCase()}
             </Text>
             <Text
-              position={[-5.5, shelfY + 0.03, 0.826]}
-              fontSize={0.082}
+              position={[0, shelfY + 7.2, 1.152]}
+              fontSize={0.21}
               color="#ead7a5"
-              maxWidth={1.18}
+              maxWidth={6.4}
               anchorX="center"
               anchorY="middle"
             >
@@ -144,27 +144,34 @@ function Book({ document, index, shelfIndex, selected, onSelect, tooltipPortal }
   const ref = useRef(null);
   const scaleRef = useRef(new THREE.Vector3(1, 1, 1));
   const [hovered, setHovered] = useState(false);
-  const width = BOOK_WIDTHS[index % BOOK_WIDTHS.length];
-  const height = BOOK_HEIGHTS[index % BOOK_HEIGHTS.length];
-  const depth = 0.44 + (index % 3) * 0.025;
-  const x = -4.12 + index * 0.92;
+  const visualIndex = shelfIndex % 2 === 0 ? index : BOOKS_PER_SHELF - index - 1;
+  const width = BOOK_WIDTHS[visualIndex % BOOK_WIDTHS.length];
+  const height = BOOK_HEIGHTS[visualIndex % BOOK_HEIGHTS.length];
+  const depth = 0.44 + (visualIndex % 3) * 0.025;
+  const x = -9.15 + index * 1.68;
   const baseY = SHELF_Y[shelfIndex] + height / 2 - 0.34;
-  const baseRotation = BOOK_ROTATIONS[index % BOOK_ROTATIONS.length];
+  const baseRotation = BOOK_ROTATIONS[visualIndex % BOOK_ROTATIONS.length];
   const active = hovered || selected;
   const targetY = selected ? baseY + 0.12 : hovered ? baseY + 0.09 : baseY;
   const targetZ = selected ? 1.28 : hovered ? 1.08 : 0.58;
   const targetRotationY = selected ? -0.12 : hovered ? -0.085 : 0;
   const targetRotationZ = selected ? 0 : hovered ? baseRotation * 0.25 : baseRotation;
   const targetScale = selected ? 1.075 : hovered ? 1.045 : 1;
-  const bookColor = BOOK_COLORS[index % BOOK_COLORS.length];
+  const bookColor = BOOK_COLORS[visualIndex % BOOK_COLORS.length];
   const lightBook = bookColor === "#f2efe7";
   const trimColor = lightBook ? "#9b8f78" : "#8f8060";
   const labelColor = lightBook ? "#e6dfd1" : "#f3eee4";
   const labelBorderColor = lightBook ? "#b8ad98" : "#a99b82";
   const pageColor = lightBook ? "#f8f4ea" : "#e9dfc7";
   const titleColor = "#202a31";
-  const spineColor = lightBook ? "#d6cfc0" : "#172431";
+  const spineColor = lightBook ? "#d6cfc0" : "#5d5146";
   const bookTexture = useBookTexture();
+
+  useEffect(() => {
+    if (!ref.current) return;
+    ref.current.position.set(x, baseY - 0.32, 0.28);
+    ref.current.scale.setScalar(0.95);
+  }, [document.id, x, baseY]);
 
   useFrame(() => {
     if (!ref.current) return;
@@ -244,11 +251,11 @@ function Book({ document, index, shelfIndex, selected, onSelect, tooltipPortal }
         <meshStandardMaterial color="#7d1735" metalness={0.01} roughness={0.78} />
       </mesh>
       <Text
-        position={[0, -height * 0.08, depth / 2 + 0.066]}
+        position={[0, -height * 0.08, depth / 2 + 0.057]}
         rotation={[0, 0, Math.PI / 2]}
-        fontSize={0.056}
+        fontSize={0.17}
         color={titleColor}
-        maxWidth={height * 0.5}
+        maxWidth={height * 0.62}
         textAlign="center"
         anchorX="center"
         anchorY="middle"
@@ -257,8 +264,8 @@ function Book({ document, index, shelfIndex, selected, onSelect, tooltipPortal }
         {document.shortTitle.toUpperCase()}
       </Text>
       <Text
-        position={[0, height * 0.31, depth / 2 + 0.067]}
-        fontSize={0.044}
+        position={[0, height * 0.31, depth / 2 + 0.058]}
+        fontSize={0.135}
         color="#6a5f4c"
         maxWidth={width * 0.38}
         textAlign="center"
@@ -283,9 +290,9 @@ function Book({ document, index, shelfIndex, selected, onSelect, tooltipPortal }
         <Html
           center
           portal={tooltipPortal}
-          position={[0, height * 0.88, 0.48]}
+          position={[0, height / 2 + 0.18, depth / 2 + 0.42]}
           className={styles.bookTooltip}
-          zIndexRange={[100, 50]}
+          zIndexRange={[1000, 100]}
         >
           <strong>{document.title}</strong>
           <span>
@@ -301,7 +308,7 @@ function Scene({ documents, activeCategory, selectedDocument, onSelect, tooltipP
   return (
     <>
       <mesh position={[0, 0, -1.15]}>
-        <planeGeometry args={[30, 16]} />
+        <planeGeometry args={[80, 44]} />
         <meshBasicMaterial color="#f5f3f5" toneMapped={false} />
       </mesh>
       <ambientLight intensity={0.7} color="#fff7ed" />
@@ -331,7 +338,7 @@ function Scene({ documents, activeCategory, selectedDocument, onSelect, tooltipP
           tooltipPortal={tooltipPortal}
         />
       ))}
-      <ContactShadows position={[0, -2.18, 0.5]} opacity={0.24} scale={12} blur={2.6} far={5} resolution={512} color="#3b2118" />
+      <ContactShadows position={[0, -6.1, 0.5]} opacity={0.24} scale={25} blur={2.6} far={5} resolution={512} color="#3b2118" />
       <Environment resolution={256}>
         <Lightformer intensity={2.4} color="#fff0d5" position={[0, 5, 3]} scale={[7, 2, 1]} rotation-x={Math.PI / 2} />
         <Lightformer intensity={1.8} color="#b7dff0" position={[-6, 0, 2]} scale={[2, 6, 1]} rotation-y={Math.PI / 2} />
@@ -346,7 +353,7 @@ export default function LibraryCanvas(props) {
   return (
     <Canvas
       className={styles.canvas}
-      camera={{ position: [-0.2, 0.15, 10.2], fov: 35, near: 0.1, far: 30 }}
+      camera={{ position: [-0.2, 0.9, 26], fov: 48, near: 0.1, far: 44 }}
       dpr={[1, 1.5]}
       shadows
       gl={{ alpha: true, antialias: true, powerPreference: "high-performance", toneMapping: THREE.ACESFilmicToneMapping }}

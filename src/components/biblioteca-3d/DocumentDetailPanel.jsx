@@ -16,7 +16,6 @@ function Icon({ children }) {
 
 export default function DocumentDetailPanel({ document, onClose, shareUrl }) {
   const [copied, setCopied] = useState(false);
-  const [citationCopied, setCitationCopied] = useState(false);
 
   const shareDocument = async () => {
     if (navigator.share) {
@@ -26,13 +25,6 @@ export default function DocumentDetailPanel({ document, onClose, shareUrl }) {
     await navigator.clipboard.writeText(shareUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 1800);
-  };
-
-  const copyCitation = async () => {
-    const citation = `Gobierno del Estado de Hidalgo. (${document.year}). ${document.title}. Biblioteca Digital de Planeación. ${document.url}`;
-    await navigator.clipboard.writeText(citation);
-    setCitationCopied(true);
-    setTimeout(() => setCitationCopied(false), 1800);
   };
 
   return (
@@ -50,8 +42,8 @@ export default function DocumentDetailPanel({ document, onClose, shareUrl }) {
         </svg>
       </button>
       <div className={styles.cover} style={{ "--book-color": document.colorVariant }}>
-        <BibliotecaDigitalLogo compact />
-        <span>Documento institucional</span>
+        <BibliotecaDigitalLogo compact className={styles.coverLogo} />
+        <span>Documento de planeación</span>
         <strong title={document.title}>{document.title}</strong>
       </div>
       <div className={styles.detailContent}>
@@ -84,10 +76,6 @@ export default function DocumentDetailPanel({ document, onClose, shareUrl }) {
           <button type="button" className={styles.shareAction} onClick={shareDocument}>
             <Icon><path d="M16 5 8 12l8 7" /><circle cx="18" cy="4" r="2" /><circle cx="6" cy="12" r="2" /><circle cx="18" cy="20" r="2" /></Icon>
             {copied ? "Enlace copiado" : "Compartir enlace"}
-          </button>
-          <button type="button" className={styles.shareAction} onClick={copyCitation}>
-            <Icon><path d="M7 4h10v16H7z" /><path d="M10 8h4M10 12h4M10 16h2" /></Icon>
-            {citationCopied ? "Cita copiada" : "Copiar cita"}
           </button>
         </div>
       </div>

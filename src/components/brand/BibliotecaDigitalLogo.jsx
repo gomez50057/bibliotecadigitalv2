@@ -3,13 +3,22 @@ import styles from "./BibliotecaDigitalLogo.module.css";
 
 export default function BibliotecaDigitalLogo({ compact = false, className = "" }) {
   return (
-    <span className={`${styles.frame} ${compact ? styles.compact : ""} ${className}`}>
+    <span className={`${styles.group} ${compact ? styles.compact : ""} ${className}`}>
       <Image
+        className={styles.logoImage}
+        src="/brand/Coordinación.png"
+        alt="Coordinación"
+        width={260}
+        height={92}
+        priority
+      />
+      <Image
+        className={styles.logoImage}
         src="/brand/biblioteca-digital.png"
         alt="Biblioteca Digital de Planeación"
-        fill
+        width={260}
+        height={92}
         priority
-        sizes={compact ? "64px" : "(max-width: 700px) 64px, 310px"}
       />
     </span>
   );

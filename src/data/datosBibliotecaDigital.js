@@ -1387,14 +1387,14 @@ export const datosBibliotecaDigital = {
       "booksIndex": "126"
     },
     {
-      "name": "Guía Metodológica para la Elaboración de los Programas Institucionales de Desarrollo 2023-2028",
+      "name": "Guía Metodológica para la Elaboración de los Programas de Desarrollo 2023-2028",
       "types": [
         "guías"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
-      "descriptionBook": "Documento técnico que especifica la metodología a seguir para la realización de los programas Institucionales de Desarrollo por parte de los Organismos Públicos Descentralizados.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Guías/Guía Metodológica para la Elaboración de los Programas Institucionales de Desarrollo 2023-2028.pdf",
+      "descriptionBook": "Documento técnico que especifica la metodología a seguir para la realización de los Programas de Desarrollo por parte de los Organismos Públicos Descentralizados.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Guías/Guía Metodológica para la Elaboración de los Programas de Desarrollo 2023-2028.pdf",
       "booksIndex": "127"
     },
     {
@@ -2652,498 +2652,498 @@ export const datosBibliotecaDigital = {
       "booksIndex": "241"
     },
     {
-      "name": "Programa Institucional de Desarrollo Colegio de Bachilleres del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo Colegio de Bachilleres del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
       "descriptionBook": "El Colegio de Bachilleres del Estado de Hidalgo, tiene por objeto impartir Bachillerato General con Capacitación para el Trabajo, a fin de que los egresados se integren a cursar estudios de nivel superior o se incorporen a la vida productiva, que favorezca el bienestar individual y la transformación del colectivo, propiciando además una educación que enseñe a aprender, a conocer, aprender a hacer, aprender a vivir juntos y aprender a ser.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo Colegio de Bachilleres del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo Colegio de Bachilleres del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "242"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Agencia de Desarrollo Valle de Plata 2023-2028",
+      "name": "Programa de Desarrollo de la Agencia de Desarrollo Valle de Plata 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Agencia de Desarrollo Valle de Plata, tiene como objetivo establecer las acciones y estrategias que impulsen programas y proyectos de infraestructura para fortalecer la industria. Además busca promover proyectos estratégicos para la atracción de inversión nacional y extranjera, coadyuvando con la generación de empleos y el crecimiento económico de los habitantes de la zona sur del estado.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Agencia de Desarrollo Valle de Plata 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Agencia de Desarrollo Valle de Plata, tiene como objetivo establecer las acciones y estrategias que impulsen programas y proyectos de infraestructura para fortalecer la industria. Además busca promover proyectos estratégicos para la atracción de inversión nacional y extranjera, coadyuvando con la generación de empleos y el crecimiento económico de los habitantes de la zona sur del estado.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Agencia de Desarrollo Valle de Plata 2023-2028.pdf",
       "booksIndex": "243"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Agencia Estatal de Energía de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Agencia Estatal de Energía de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Agencia Estatal de Energía de Hidalgo 2023-2028, es el instrumento de planeación sectorial que orienta y dirige la política estatal en materia energética y de telecomunicaciones, a través de un enfoque sostenible de responsabilidad social. Asimismo, guarda armonía con la visión del gobierno actual, buscando el bienestar de la población hidalguense, priorizando aquellos con mayor rezago y menores oportunidades, en concordancia con los instrumentos de planeación estatal y sectorial, mediante el desarrollo, gestión, observancia, cumplimiento y coordinación de los aspectos relacionados con las áreas prioritarias, incentivando la inversión y la economía sostenible.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Agencia Estatal de Energía de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Agencia Estatal de Energía de Hidalgo 2023-2028, es el instrumento de planeación sectorial que orienta y dirige la política estatal en materia energética y de telecomunicaciones, a través de un enfoque sostenible de responsabilidad social. Asimismo, guarda armonía con la visión del gobierno actual, buscando el bienestar de la población hidalguense, priorizando aquellos con mayor rezago y menores oportunidades, en concordancia con los instrumentos de planeación estatal y sectorial, mediante el desarrollo, gestión, observancia, cumplimiento y coordinación de los aspectos relacionados con las áreas prioritarias, incentivando la inversión y la economía sostenible.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Agencia Estatal de Energía de Hidalgo 2023-2028.pdf",
       "booksIndex": "244"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Comisión de Agua y Alcantarillado de Sistemas Intermunicipales 2023-2028",
+      "name": "Programa de Desarrollo de la Comisión de Agua y Alcantarillado de Sistemas Intermunicipales 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Comisión de Agua y Alcantarillado de Sistemas Intermunicipales 2023-2028, derivado de las necesidades de la ciudadanía y en apego a lo establecido en el Plan Estatal de Desarrollo 2022-2028, y en el marco del Acuerdo 4 Desarrollo Sostenible e Infraestructura Transformadora, se creo mediante la participación de las diferentes áreas administrativas que conforman la Comisión de Agua y Alcantarillado de Sistemas Intermunicipales, exponiendo las principales problemáticas que enfrentan día a día para el desempeño de sus funciones, así como las derivadas en el acercamiento con la ciudadanía, por lo que aquí se exponen las acciones consideradas para su solventación, de acuerdo a la perspectiva del proyecto del Gobierno del Estado de Hidalgo, alineándose a lo que estipula el Plan Nacional de Desarrollo 2019-2024, el Programa Sectorial de Desarrollo de Infraestructura Pública y Desarrollo Urbano Sostenible 2023-2028 y a los Objetivos de Desarrollo Sostenible de las Naciones Unidas definidos en la Agenda Internacional 2030, contribuyendo directamente a esta política pública con el fin de mejorar el bienestar de las y los hidalguenses mediante el aprovechamiento y la preservación del recurso hídrico.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Comisión de Agua y Alcantarillado de Sistemas Intermunicipales 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Comisión de Agua y Alcantarillado de Sistemas Intermunicipales 2023-2028, derivado de las necesidades de la ciudadanía y en apego a lo establecido en el Plan Estatal de Desarrollo 2022-2028, y en el marco del Acuerdo 4 Desarrollo Sostenible e Infraestructura Transformadora, se creo mediante la participación de las diferentes áreas administrativas que conforman la Comisión de Agua y Alcantarillado de Sistemas Intermunicipales, exponiendo las principales problemáticas que enfrentan día a día para el desempeño de sus funciones, así como las derivadas en el acercamiento con la ciudadanía, por lo que aquí se exponen las acciones consideradas para su solventación, de acuerdo a la perspectiva del proyecto del Gobierno del Estado de Hidalgo, alineándose a lo que estipula el Plan Nacional de Desarrollo 2019-2024, el Programa Sectorial de Desarrollo de Infraestructura Pública y Desarrollo Urbano Sostenible 2023-2028 y a los Objetivos de Desarrollo Sostenible de las Naciones Unidas definidos en la Agenda Internacional 2030, contribuyendo directamente a esta política pública con el fin de mejorar el bienestar de las y los hidalguenses mediante el aprovechamiento y la preservación del recurso hídrico.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Comisión de Agua y Alcantarillado de Sistemas Intermunicipales 2023-2028.pdf",
       "booksIndex": "245"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Comisión de Agua y Alcantarillado del Sistema Valle del Mezquital 2023-2028",
+      "name": "Programa de Desarrollo de la Comisión de Agua y Alcantarillado del Sistema Valle del Mezquital 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Comisión de Agua y Alcantarillado del Sistema Valle del Mezquital 2023-2028, esta construído en base a una planeación estratégica e institucional, orientada hacia una gestión para resultados con evidencias, que contribuye a la solución de problemas de abasto de agua en los municipios donde tiene cobertura el organismo, partiendo de la formulación de diagnósticos que permiten identificar las principales áreas de oportunidad en temas de recurso hídrico con conocimientos y recursos necesarios para incidir de manera directa y positiva a mejorar todos los aspectos relacionados con el recurso del agua.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Comisión de Agua y Alcantarillado del Sistema Valle del Mezquital 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Comisión de Agua y Alcantarillado del Sistema Valle del Mezquital 2023-2028, esta construído en base a una planeación estratégica, orientada hacia una gestión para resultados con evidencias, que contribuye a la solución de problemas de abasto de agua en los municipios donde tiene cobertura el organismo, partiendo de la formulación de diagnósticos que permiten identificar las principales áreas de oportunidad en temas de recurso hídrico con conocimientos y recursos necesarios para incidir de manera directa y positiva a mejorar todos los aspectos relacionados con el recurso del agua.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Comisión de Agua y Alcantarillado del Sistema Valle del Mezquital 2023-2028.pdf",
       "booksIndex": "246"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Comisión Estatal de Biodiversidad de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Comisión Estatal de Biodiversidad de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "La biodiversidad juega un papel fundamental en la vida de todas las personas, ya que nos brindan servicios ecosistémicos como son alimento, medicamentos, agua, entre otros, ademas proporciona las materias primas que favorecen el desarrollo socioeconómico. Mientras que la Política Institucional de Desarrollo de esta comisión marca la importancia de establecer en el Estado un programa para promover la conservación de los recursos naturales y la biodiversidad, tomando en cuenta la problemática socioambiental del estado, en función a contribuir con el bienestar físico, económico, social y ambiental de los hidalguenses, fundamentado en la Ley de Planeación y Prospectiva del Estado de Hidalgo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Comisión Estatal de Biodiversidad de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "La biodiversidad juega un papel fundamental en la vida de todas las personas, ya que nos brindan servicios ecosistémicos como son alimento, medicamentos, agua, entre otros, ademas proporciona las materias primas que favorecen el desarrollo socioeconómico. Mientras que la Política de Desarrollo de esta comisión marca la importancia de establecer en el Estado un programa para promover la conservación de los recursos naturales y la biodiversidad, tomando en cuenta la problemática socioambiental del estado, en función a contribuir con el bienestar físico, económico, social y ambiental de los hidalguenses, fundamentado en la Ley de Planeación y Prospectiva del Estado de Hidalgo.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Comisión Estatal de Biodiversidad de Hidalgo 2023-2028.pdf",
       "booksIndex": "247"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Comisión Estatal de Vivienda 2023-2028",
+      "name": "Programa de Desarrollo de la Comisión Estatal de Vivienda 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "Para el Programa Institucional de Desarrollo de la Comisión Estatal de Vivienda 2023-2028, lo prioritario es una política social que atienda las necesidades de los grupos mas vulnerables, que promueva y genere acciones mediante programas integrales para que mas familias que viven en condiciones de pobreza con carencias básicas de vivienda, cuenten con los servicios básicos de vivienda, y se les ofrezca espacios públicos dignos en donde radiquen para fomentar el sano esparcimiento.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Comisión Estatal de Vivienda 2023-2028.pdf",
+      "descriptionBook": "Para el Programa de Desarrollo de la Comisión Estatal de Vivienda 2023-2028, lo prioritario es una política social que atienda las necesidades de los grupos mas vulnerables, que promueva y genere acciones mediante programas integrales para que mas familias que viven en condiciones de pobreza con carencias básicas de vivienda, cuenten con los servicios básicos de vivienda, y se les ofrezca espacios públicos dignos en donde radiquen para fomentar el sano esparcimiento.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Comisión Estatal de Vivienda 2023-2028.pdf",
       "booksIndex": "248"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Comisión Estatal del Agua y Alcantarillado 2023-2028",
+      "name": "Programa de Desarrollo de la Comisión Estatal del Agua y Alcantarillado 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Comisión Estatal del Agua y Alcantarillado 2023-2028, se fundamenta en la Ley de Planeación y Prospectiva del Estado de Hidalgo, tiene como principal objetivo impulsar y consolidar la transformación de la gestión del recurso hídrico, tomando como base la problemática socioambiental de las regiones y municipios, en beneficio de las y los hidalguenses.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Comisión Estatal del Agua y Alcantarillado 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Comisión Estatal del Agua y Alcantarillado 2023-2028, se fundamenta en la Ley de Planeación y Prospectiva del Estado de Hidalgo, tiene como principal objetivo impulsar y consolidar la transformación de la gestión del recurso hídrico, tomando como base la problemática socioambiental de las regiones y municipios, en beneficio de las y los hidalguenses.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Comisión Estatal del Agua y Alcantarillado 2023-2028.pdf",
       "booksIndex": "249"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Comisión Estatal para el Desarrollo Sostenible de los Pueblos Indígenas 2023-2028",
+      "name": "Programa de Desarrollo de la Comisión Estatal para el Desarrollo Sostenible de los Pueblos Indígenas 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Comisión Estatal para el Desarrollo Sostenible de los Pueblos Indígenas 2023-2028, tiene como objetivo principal ser el instrumento guía que encamine las acciones y esfuerzos de la Comisión hacia el desarrollo de políticas públicas y programas eficaces.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Comisión Estatal para el Desarrollo Sostenible de los Pueblos Indígenas 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Comisión Estatal para el Desarrollo Sostenible de los Pueblos Indígenas 2023-2028, tiene como objetivo principal ser el instrumento guía que encamine las acciones y esfuerzos de la Comisión hacia el desarrollo de políticas públicas y programas eficaces.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Comisión Estatal para el Desarrollo Sostenible de los Pueblos Indígenas 2023-2028.pdf",
       "booksIndex": "250"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Corporación de Fomento de Infraestructura Industrial 2023-2028",
+      "name": "Programa de Desarrollo de la Corporación de Fomento de Infraestructura Industrial 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "EI Programa Institucional de Desarrollo de la Corporación de Fomento de Infraestructura Industrial tiene como misión ser el eje rector de las políticas, estrategias y acciones que permitan el crecimiento y desarrollo de la industria en Hidalgo, a través de la ampliación, mejora y mantenimiento de la infraestructura industrial, la comercialización de espacios con vocación industrial, y la atracción de inversiones productivas intersectoriales, que permitan la consolidación de empresas a través del encadenamiento productivo entre empresas tractoras y las Ml PYMES (micro, pequenas y medianas empresas) dentro de los parques y zonas industriales a efecto de impulsar su competencia y productividad en el mercado interno, la promoción de proyectos regionales y continuar con un ambiente de negocios favorable por medio de la mejora regulatoria, así como fomentar la diversificación de la actividad económica del Estado para una mayor igualdad entre regiones y sectores.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Corporación de Fomento de Infraestructura Industrial 2023-2028.pdf",
+      "descriptionBook": "EI Programa de Desarrollo de la Corporación de Fomento de Infraestructura Industrial tiene como misión ser el eje rector de las políticas, estrategias y acciones que permitan el crecimiento y desarrollo de la industria en Hidalgo, a través de la ampliación, mejora y mantenimiento de la infraestructura industrial, la comercialización de espacios con vocación industrial, y la atracción de inversiones productivas intersectoriales, que permitan la consolidación de empresas a través del encadenamiento productivo entre empresas tractoras y las Ml PYMES (micro, pequenas y medianas empresas) dentro de los parques y zonas industriales a efecto de impulsar su competencia y productividad en el mercado interno, la promoción de proyectos regionales y continuar con un ambiente de negocios favorable por medio de la mejora regulatoria, así como fomentar la diversificación de la actividad económica del Estado para una mayor igualdad entre regiones y sectores.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Corporación de Fomento de Infraestructura Industrial 2023-2028.pdf",
       "booksIndex": "251"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Escuela de Música del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Escuela de Música del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Escuela de Música del Estado de Hidalgo 2023-2028, es el documento que llevará a la Escuela de Música del Estado de Hidalgo a establecer los objetivos, acciones, indicadores y metas que ésta se proponga alcanzar, teniendo en cuenta que se trata de un documento abierto que se transformará como resultado de las diferentes evaluaciones que se llevarán a cabo durante este periodo de gobierno.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Escuela de Música del Estado de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Escuela de Música del Estado de Hidalgo 2023-2028, es el documento que llevará a la Escuela de Música del Estado de Hidalgo a establecer los objetivos, acciones, indicadores y metas que ésta se proponga alcanzar, teniendo en cuenta que se trata de un documento abierto que se transformará como resultado de las diferentes evaluaciones que se llevarán a cabo durante este periodo de gobierno.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Escuela de Música del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "252"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Operadora de Eventos del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Operadora de Eventos del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Operadora de Eventos del Estado de Hidalgo 2023-2028, constituye un elemento esencial del marco estratégico y normativo de la administración pública estatal, contribuyendo a uno de los objetivos primordiales en la presente administración de hacer de Hidalgo una potencia turística. Como parte de las diferentes acciones para lograrlo se establece el aprovechamiento de los bienes propiedad del Estado para planear, operar y organizar todo tipo de eventos para impulsar el desarrollo turístico de Hidalgo, promoviendo el desarrollo de actividades artísticas, la diversión y entretenimiento, promoción y conservación de manifestaciones culturales como carnavales, ferias populares, festividades tradicionales, muestras gastronómicas, festivales, entre otros; fomentando así la afluencia de visitantes brindando instalaciones y servicios accesibles, sostenibles e innovadores deportivas y culturales en los diferentes recintos a cargo del Gobierno del Estado de Hidalgo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Operadora de Eventos del Estado de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Operadora de Eventos del Estado de Hidalgo 2023-2028, constituye un elemento esencial del marco estratégico y normativo de la administración pública estatal, contribuyendo a uno de los objetivos primordiales en la presente administración de hacer de Hidalgo una potencia turística. Como parte de las diferentes acciones para lograrlo se establece el aprovechamiento de los bienes propiedad del Estado para planear, operar y organizar todo tipo de eventos para impulsar el desarrollo turístico de Hidalgo, promoviendo el desarrollo de actividades artísticas, la diversión y entretenimiento, promoción y conservación de manifestaciones culturales como carnavales, ferias populares, festividades tradicionales, muestras gastronómicas, festivales, entre otros; fomentando así la afluencia de visitantes brindando instalaciones y servicios accesibles, sostenibles e innovadores deportivas y culturales en los diferentes recintos a cargo del Gobierno del Estado de Hidalgo.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Operadora de Eventos del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "253"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Policía Industrial Bancaria del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Policía Industrial Bancaria del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "La Policía Industrial Bancaria del Estado de Hidalgo es un organismo descentralizado de la Administración Pública y sectorizado a la Secretaría de Seguridad Pública del Estado de Hidalgo, con personalidad jurídica y patrimonio propio, el cual goza de autonomía de gestión para el cabal cumplimiento de los objetivos y metas detalladas en su decreto, así como en la planeación estatal; para lo que se ha generado su Programa Institucional de Desarrollo para el periodo 2023-2028, que es un documento rector imprescindible para que, las acciones emprendidas sean conducidas a la generación y logro de resultados estableciendo objetivos y líneas de acción para alcanzarlos, además de medir a través de indicadores los avances obtenidos, que son orientados a fortalecer los resultados en el Plan Estatal de Desarrollo 2022-2028 y en el Programa Sectorial de Desarrollo de Seguridad Pública 2023-2028.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Policía Industrial Bancaria del Estado de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "La Policía Industrial Bancaria del Estado de Hidalgo es un organismo descentralizado de la Administración Pública y sectorizado a la Secretaría de Seguridad Pública del Estado de Hidalgo, con personalidad jurídica y patrimonio propio, el cual goza de autonomía de gestión para el cabal cumplimiento de los objetivos y metas detalladas en su decreto, así como en la planeación estatal; para lo que se ha generado su Programa de Desarrollo para el periodo 2023-2028, que es un documento rector imprescindible para que, las acciones emprendidas sean conducidas a la generación y logro de resultados estableciendo objetivos y líneas de acción para alcanzarlos, además de medir a través de indicadores los avances obtenidos, que son orientados a fortalecer los resultados en el Plan Estatal de Desarrollo 2022-2028 y en el Programa Sectorial de Desarrollo de Seguridad Pública 2023-2028.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Policía Industrial Bancaria del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "254"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Secretaría Técnica del Sistema Estatal Anticorrupción de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Secretaría Técnica del Sistema Estatal Anticorrupción de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Secretaría Técnica del Sistema Estatal Anticorrupción de Hidalgo, se encuentra alineado a los objetivos y líneas de acción del Plan Nacional de Desarrollo 2018-2024 y al Plan Estatal de Desarrollo 2022-2028, con una visión de congruencia con el objetivo de desarrollo sostenible de la Agenda 2030 “16 Paz, Justicia e Instituciones Sólidas”, y fortalecido con las propuestas ciudadanas surgidas del proceso de consulta pública denominado “Diálogos Ciudadanos para la Construcción del Plan Estatal para la Transformación de Hidalgo”.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Secretaría Técnica del Sistema Estatal Anticorrupción de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Secretaría Técnica del Sistema Estatal Anticorrupción de Hidalgo, se encuentra alineado a los objetivos y líneas de acción del Plan Nacional de Desarrollo 2018-2024 y al Plan Estatal de Desarrollo 2022-2028, con una visión de congruencia con el objetivo de desarrollo sostenible de la Agenda 2030 “16 Paz, Justicia e Instituciones Sólidas”, y fortalecido con las propuestas ciudadanas surgidas del proceso de consulta pública denominado “Diálogos Ciudadanos para la Construcción del Plan Estatal para la Transformación de Hidalgo”.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Secretaría Técnica del Sistema Estatal Anticorrupción de Hidalgo 2023-2028.pdf",
       "booksIndex": "255"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Intercultural del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Intercultural del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa lnstitucional de Desarrollo de la Universidad lntercultural del Estado de Hidalgo 2023 - 2028, tiene el propósito de trazar una ruta clara al 2028, así como establecer una visión prospectiva hacia el 2040, alineándonos al Plan Nacional de Desarrollo 2019-2024 y sumando esfuerzos para cumplir con las políticas, acuerdos, y estrategias plasmadas en el Plan Estatal de Desarrollo 2022-2028 así como lo establecido en la planeación federal, en éste se enmarcan las acciones en materia de inclusión, equidad, interculturalidad, sustentabilidad y calidad en el proceso formativo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Intercultural del Estado de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Universidad lntercultural del Estado de Hidalgo 2023 - 2028, tiene el propósito de trazar una ruta clara al 2028, así como establecer una visión prospectiva hacia el 2040, alineándonos al Plan Nacional de Desarrollo 2019-2024 y sumando esfuerzos para cumplir con las políticas, acuerdos, y estrategias plasmadas en el Plan Estatal de Desarrollo 2022-2028 así como lo establecido en la planeación federal, en éste se enmarcan las acciones en materia de inclusión, equidad, interculturalidad, sustentabilidad y calidad en el proceso formativo.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Intercultural del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "256"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Politécnica de Huejutla 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Politécnica de Huejutla 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa lnstitucional de Desarrollo 2022-2028 de la Universidad Politécnica de Huejutla es el instrumento principal de planeación integral y participativa, lo que lo convierte en una herramienta estratégica para el desarrollo de la institucion, la cual tiene como fin máximo la formación integral de profesionales que impulsen el desarrollo regional de la huasteca hidalguense y del estado de Hidalgo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Politécnica de Huejutla 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo 2022-2028 de la Universidad Politécnica de Huejutla es el instrumento principal de planeación integral y participativa, lo que lo convierte en una herramienta estratégica para el desarrollo de la institucion, la cual tiene como fin máximo la formación integral de profesionales que impulsen el desarrollo regional de la huasteca hidalguense y del estado de Hidalgo.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Politécnica de Huejutla 2023-2028.pdf",
       "booksIndex": "257"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Politécnica de Pachuca 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Politécnica de Pachuca 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "EI Programa Institucional de Desarrollo de la Universidad Politécnica de Pachuca 2023 - 2028, se da en un 2023 marcado por un cambio de gobierno por la transformación de Hidalgo y posterior a una pandemia; esta herramienta estratégica, prospectiva y evaluatoria, establece los objetivos, metas y líneas de acción mediante un diagnóstico de necesidades de la institución y tiene como propósito impulsar la gestión institucional y escolar de manera eficiente y eficaz favoreciendo la consolidación del servicio educativo en la sociedad hidalguense.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Politécnica de Pachuca 2023-2028.pdf",
+      "descriptionBook": "EI Programa de Desarrollo de la Universidad Politécnica de Pachuca 2023 - 2028, se da en un 2023 marcado por un cambio de gobierno por la transformación de Hidalgo y posterior a una pandemia; esta herramienta estratégica, prospectiva y evaluatoria, establece los objetivos, metas y líneas de acción mediante un diagnóstico de necesidades de la institución y tiene como propósito impulsar la gestión y escolar de manera eficiente y eficaz favoreciendo la consolidación del servicio educativo en la sociedad hidalguense.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Politécnica de Pachuca 2023-2028.pdf",
       "booksIndex": "258"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Politécnica de Tulancingo 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Politécnica de Tulancingo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa lnstitucional de Desarrollo de la Universidad Politécnica de Tulancingo 2023 - 2028, establece las bases para la coordinación de la planeación en las diversas áreas que integran a la institución, además de que constituye el referente para el diseño de escenarios de mediano y largo plazo, con miras al 2040, en donde se consideran las premisas de calidad, inclusión y equidad, congruentes con la visión y misión institucional y alineadas a los planes de gobierno y programas del sector educativo tanto a nivel estatal como federal, a través de una planeación prospectiva, democrática y participativa.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Politécnica de Tulancingo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Universidad Politécnica de Tulancingo 2023 - 2028, establece las bases para la coordinación de la planeación en las diversas áreas que integran a la institución, además de que constituye el referente para el diseño de escenarios de mediano y largo plazo, con miras al 2040, en donde se consideran las premisas de calidad, inclusión y equidad, congruentes con la visión y misión y alineadas a los planes de gobierno y programas del sector educativo tanto a nivel estatal como federal, a través de una planeación prospectiva, democrática y participativa.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Politécnica de Tulancingo 2023-2028.pdf",
       "booksIndex": "259"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Politécnica Metropolitana de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Politécnica Metropolitana de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "La participación de las y los integrantes de la comunidad que conforma la Universidad Politécnica Metropolitana de Hidalgo fue fundamental para la construcción del Programa lnstitucional de Desarrollo 2022-2028. Esta participación resulta en la estructuración de un instrumento estratégico que se apega a las necesidades y expectativas reales de la institución. Con ello, se garantiza la impartición de un servicio educativo de calidad que forme personas que atiendan las adversidades que afronta la sociedad y el sector productivo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Politécnica Metropolitana de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "La participación de las y los integrantes de la comunidad que conforma la Universidad Politécnica Metropolitana de Hidalgo fue fundamental para la construcción del Programa de Desarrollo 2022-2028. Esta participación resulta en la estructuración de un instrumento estratégico que se apega a las necesidades y expectativas reales de la institución. Con ello, se garantiza la impartición de un servicio educativo de calidad que forme personas que atiendan las adversidades que afronta la sociedad y el sector productivo.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Politécnica Metropolitana de Hidalgo 2023-2028.pdf",
       "booksIndex": "260"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Tecnológica de la Huasteca Hidalguense 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Tecnológica de la Huasteca Hidalguense 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa lnstitucional de Desarrollo representa un compromiso sólido y una guía estratégica que permitirá a la Universidad Tecnolgica de la Huasteca Hidalguense avanzar hacia un futuro más próspero, inclusivo y sostenible, contribuyendo de manera significativa al desarrollo integral de la región y al logro de los objetivos institucionales planteados.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Tecnológica de la Huasteca Hidalguense 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo representa un compromiso sólido y una guía estratégica que permitirá a la Universidad Tecnolgica de la Huasteca Hidalguense avanzar hacia un futuro más próspero, inclusivo y sostenible, contribuyendo de manera significativa al desarrollo integral de la región y al logro de los objetivos planteados.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Tecnológica de la Huasteca Hidalguense 2023-2028.pdf",
       "booksIndex": "261"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Tecnológica de la Zona Metropolitana del Valle de México 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Tecnológica de la Zona Metropolitana del Valle de México 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Universidad Tecnológica de la Zona Metropolitana del Valle de México 2023-2028 tiene como propósito fundamental establecer las directrices de planeación estratégica que regirán la vida institucional de la Universidad Tecnológica de la Zona Metropolitana del Valle de México (UTVAM).",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Tecnológica de la Zona Metropolitana del Valle de México 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Universidad Tecnológica de la Zona Metropolitana del Valle de México 2023-2028 tiene como propósito fundamental establecer las directrices de planeación estratégica que regirán la vida universitaria de la Universidad Tecnológica de la Zona Metropolitana del Valle de México (UTVAM).",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Tecnológica de la Zona Metropolitana del Valle de México 2023-2028.pdf",
       "booksIndex": "262"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Tecnológica de Tula-Tepeji 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Tecnológica de Tula-Tepeji 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "EI Programa Institucional de Desarrollo (PID) de la Universidad Tecnolgica de Tula-Tepeji 2023-2028, fruto de una planificación estratégica intensiva, no es simplemente un documento, sino una oportunidad palpable de redefinir el rumbo que exige nuestra sociedad. Es un compendio de objetivos ambiciosos, estrategias audaces, asignación de responsabilidades y un compromiso inquebrantable con la evaluación continua mediante indicadores de resultados.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Tecnológica de Tula-Tepeji 2023-2028.pdf",
+      "descriptionBook": "EI Programa de Desarrollo (PID) de la Universidad Tecnolgica de Tula-Tepeji 2023-2028, fruto de una planificación estratégica intensiva, no es simplemente un documento, sino una oportunidad palpable de redefinir el rumbo que exige nuestra sociedad. Es un compendio de objetivos ambiciosos, estrategias audaces, asignación de responsabilidades y un compromiso inquebrantable con la evaluación continua mediante indicadores de resultados.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Tecnológica de Tula-Tepeji 2023-2028.pdf",
       "booksIndex": "263"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Tecnológica del Valle del Mezquital 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Tecnológica del Valle del Mezquital 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de la Universidad Tecnológica del Valle del Mezquital 2023-2028 es el documento principal que guía la actuación de mediano plazo a través de seis objetivos institucionales que señalan los preceptos axiológicos de su misión y visión en congruencia con los instrumentos de la planeación estratégica nacional y estatal.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Tecnológica del Valle del Mezquital 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de la Universidad Tecnológica del Valle del Mezquital 2023-2028 es el documento principal que guía la actuación de mediano plazo a través de seis objetivos que señalan los preceptos axiológicos de su misión y visión en congruencia con los instrumentos de la planeación estratégica nacional y estatal.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Tecnológica del Valle del Mezquital 2023-2028.pdf",
       "booksIndex": "264"
     },
     {
-      "name": "Programa Institucional de Desarrollo de Servicios de Salud de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de Servicios de Salud de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo de Servicios de Salud de Hidalgo 2023-2028, es elaborado bajo el modelo de planeación participativa y bajo los lineamientos de la \"Guía Metodológica para la Elaboración de los Programas lnstitucionales de Desarrollo 2023-2028\", emitidos por parte de la Unidad de Planeación y Prospectiva de Hidalgo y establece las principales acciones a realizar, con el propósito de brindar atención médica de calidad a la población históricamente rezagada, como son los pueblos originarios y los grupos de atención prioritaria; para ello es indispensable fortalecer la atención preventiva en el primer nivel de atención, incrementar la cobertura de atención, mejorar la capacidad resolutiva e implementar la referencia y contra referencia en toda la red de atención de servicios de salud; así como abastecer y dignificar las unidades médicas para su operación.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de Servicios de Salud de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo de Servicios de Salud de Hidalgo 2023-2028, es elaborado bajo el modelo de planeación participativa y bajo los lineamientos de la \"Guía Metodológica para la Elaboración de los Programas lnstitucionales de Desarrollo 2023-2028\", emitidos por parte de la Unidad de Planeación y Prospectiva de Hidalgo y establece las principales acciones a realizar, con el propósito de brindar atención médica de calidad a la población históricamente rezagada, como son los pueblos originarios y los grupos de atención prioritaria; para ello es indispensable fortalecer la atención preventiva en el primer nivel de atención, incrementar la cobertura de atención, mejorar la capacidad resolutiva e implementar la referencia y contra referencia en toda la red de atención de servicios de salud; así como abastecer y dignificar las unidades médicas para su operación.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de Servicios de Salud de Hidalgo 2023-2028.pdf",
       "booksIndex": "265"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Bachillerato del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Bachillerato del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo del Bachillerato del Estado de Hidalgo 2023-2028, en su estructura establece las políticas y directrices que el organismo seguirá a corto, mediano y largo plazo, también se fijan los objetivos, estrategias y metas que se deben cumplir durante este periodo; asimismo, plasma en su contenido proyectos institucionales que coadyuvan al cumplimiento de los propósitos de la agenda 2030 para el Desarrollo Sostenible, considerando las metas nacionales y estatales en materia educativa.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Bachillerato del Estado de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del Bachillerato del Estado de Hidalgo 2023-2028, en su estructura establece las políticas y directrices que el organismo seguirá a corto, mediano y largo plazo, también se fijan los objetivos, estrategias y metas que se deben cumplir durante este periodo; asimismo, plasma en su contenido proyectos que coadyuvan al cumplimiento de los propósitos de la agenda 2030 para el Desarrollo Sostenible, considerando las metas nacionales y estatales en materia educativa.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Bachillerato del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "266"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Centro Estatal de Maquinaria para el Desarrollo 2023-2028",
+      "name": "Programa de Desarrollo del Centro Estatal de Maquinaria para el Desarrollo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa lnstitucional de Desarrollo del Centro Estatal de Maquinaria para el Desarrollo 2023-2028, tiene como propósito establecer la dirección estratégica que se seguir en los próximos seis años, plasmando una misión, visión, objetivos y líneas de acción, perfectamente alineadas a los Objetivos de Desarrollo Sostenible de la Agenda 2030, Plan Nacional de Desarrollo 2018-2024, Plan Estatal de Desarrollo 2022-2028, así como al Programa Sectorial de Desarrollo de Infraestructura Pública y Desarrollo Urbano Sostenible 2023-2028, respondiendo a los problemas públicos y necesidades actuales que demanda el pueblo hidalguense.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Centro Estatal de Maquinaria para el Desarrollo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del Centro Estatal de Maquinaria para el Desarrollo 2023-2028, tiene como propósito establecer la dirección estratégica que se seguir en los próximos seis años, plasmando una misión, visión, objetivos y líneas de acción, perfectamente alineadas a los Objetivos de Desarrollo Sostenible de la Agenda 2030, Plan Nacional de Desarrollo 2018-2024, Plan Estatal de Desarrollo 2022-2028, así como al Programa Sectorial de Desarrollo de Infraestructura Pública y Desarrollo Urbano Sostenible 2023-2028, respondiendo a los problemas públicos y necesidades actuales que demanda el pueblo hidalguense.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Centro Estatal de Maquinaria para el Desarrollo 2023-2028.pdf",
       "booksIndex": "267"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Consejo de Ciencia, Tecnología e Innovación de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Consejo de Ciencia, Tecnología e Innovación de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo del Consejo de Ciencia, Tecnología e Innovación 2022-2028, detalla los objetivos y estrategias que darán dirección a las acciones de política pública en materia científica y tecnológica, así como los elementos de acción para la consolidación de un ecosistema favorable a la ciencia, tecnología e innovación en el estado.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Consejo de Ciencia, Tecnología e Innovación de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del Consejo de Ciencia, Tecnología e Innovación 2022-2028, detalla los objetivos y estrategias que darán dirección a las acciones de política pública en materia científica y tecnológica, así como los elementos de acción para la consolidación de un ecosistema favorable a la ciencia, tecnología e innovación en el estado.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Consejo de Ciencia, Tecnología e Innovación de Hidalgo 2023-2028.pdf",
       "booksIndex": "268"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Consejo Estatal para la Cultura y las Artes de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Consejo Estatal para la Cultura y las Artes de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo del Consejo Estatal para la Cultura y las Artes de Hidalgo 2023-2028 se trabajó con las personas titulares de áreas del Consejo Estatal para la Cultura y las Artes de Hidalgo con quienes se analizó la situación actual del Sector Cultural y la importancia de reconocer al arte y la cultura como fuentes imprescindibles de identidad, trascendencia y riqueza de nuestro pueblo; como un conjunto de valores de pertenencia respecto a nuestro origen, lo cual nos permite convivir y desarrollarnos sin vulnerar nuestras raíces.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Consejo Estatal para la Cultura y las Artes de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del Consejo Estatal para la Cultura y las Artes de Hidalgo 2023-2028 se trabajó con las personas titulares de áreas del Consejo Estatal para la Cultura y las Artes de Hidalgo con quienes se analizó la situación actual del Sector Cultural y la importancia de reconocer al arte y la cultura como fuentes imprescindibles de identidad, trascendencia y riqueza de nuestro pueblo; como un conjunto de valores de pertenencia respecto a nuestro origen, lo cual nos permite convivir y desarrollarnos sin vulnerar nuestras raíces.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Consejo Estatal para la Cultura y las Artes de Hidalgo 2023-2028.pdf",
       "booksIndex": "269"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Distrito de Educación, Salud, Ciencia, Tecnología e Innovación 2023-2028",
+      "name": "Programa de Desarrollo del Distrito de Educación, Salud, Ciencia, Tecnología e Innovación 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo del Distrito de Educación, Salud, Ciencia, Tecnología e Innovación 2023-2028 establece la consolidación del ecosistema de ciencia, tecnología e innovación a través de políticas inclusivas que garanticen el acceso equitativo a servicios de educación, salud, vivienda, y alimentación.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Distrito de Educación, Salud, Ciencia, Tecnología e Innovación 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del Distrito de Educación, Salud, Ciencia, Tecnología e Innovación 2023-2028 establece la consolidación del ecosistema de ciencia, tecnología e innovación a través de políticas inclusivas que garanticen el acceso equitativo a servicios de educación, salud, vivienda, y alimentación.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Distrito de Educación, Salud, Ciencia, Tecnología e Innovación 2023-2028.pdf",
       "booksIndex": "270"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Catastral del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Catastral del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo del Instituto Catastral del Estado de Hidalgo 2022-2028, presenta los objetivos y líneas de acción que el gobierno del estado a través del Instituto Catastral del Estado de Hidalgo, implementará para el fortalecimiento de los catastros municipales y por consecuencia de los ingresos provenientes de las contribuciones inmobiliarias como el impuesto predial.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Catastral del Estado de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del Instituto Catastral del Estado de Hidalgo 2022-2028, presenta los objetivos y líneas de acción que el gobierno del estado a través del Instituto Catastral del Estado de Hidalgo, implementará para el fortalecimiento de los catastros municipales y por consecuencia de los ingresos provenientes de las contribuciones inmobiliarias como el impuesto predial.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Catastral del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "271"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto de Capacitación para el Trabajo del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Instituto de Capacitación para el Trabajo del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
       "descriptionBook": "El objetivo del programa radica en definir las políticas y líneas de acción estratégicas para impactar al sector laboral, que es la base para generar mejores oportunidades y estabilidad en las familias del Estado, con empleos que contribuyan a un entorno social y económico seguro a través de los servicios que brinda la Institución, cubriendo el territorio estatal a través de los planteles y acciones móviles de capacitación.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto de Capacitación para el Trabajo del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto de Capacitación para el Trabajo del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "272"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense de Competitividad Empresarial 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense de Competitividad Empresarial 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "Programa Institucional de Desarrollo del Instituto Hidalguense de la Competitividad Empresarial 2023-2028",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense de Competitividad Empresarial 2023-2028.pdf",
+      "descriptionBook": "Programa de Desarrollo del Instituto Hidalguense de la Competitividad Empresarial 2023-2028",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense de Competitividad Empresarial 2023-2028.pdf",
       "booksIndex": "273"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense de Educación 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense de Educación 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El propósito del Programa Institucional de Desarrollo del Instituto Hidalguense de Educación 2023-2028 consiste en poner a la educación básica al centro de la transformación de Hidalgo, en concordancia con los objetivos del ejecutivo estatal, para crear una nueva realidad educativa en Hidalgo, donde se promuevan a los principios de la Nueva Escuela Mexicana, en beneficio de la niñez y adolescencia hidalguense, garantizando el derecho a la educación incluyente y de excelencia.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense de Educación 2023-2028.pdf",
+      "descriptionBook": "El propósito del Programa de Desarrollo del Instituto Hidalguense de Educación 2023-2028 consiste en poner a la educación básica al centro de la transformación de Hidalgo, en concordancia con los objetivos del ejecutivo estatal, para crear una nueva realidad educativa en Hidalgo, donde se promuevan a los principios de la Nueva Escuela Mexicana, en beneficio de la niñez y adolescencia hidalguense, garantizando el derecho a la educación incluyente y de excelencia.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense de Educación 2023-2028.pdf",
       "booksIndex": "274"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense de Educación para Adultos 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense de Educación para Adultos 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
       "descriptionBook": "El propósito general del programa esta centrado en la contribución para la disminución del rezago educativo en nuestra entidad y de esta manera contribuir para alcanzar las metas y objetivos del Plan Estatal de Desarrollo 2022-2028 y el Plan Nacional de Desarrollo 2019-2024, los cuales buscan cumplir con el derecho a la educación de la población, generando una ciudadanía estable, feliz, y plena, donde se busca que la educación impulse el mejoramiento personal , el bienestar social, en el cual fija los estándares para alcanzar una mejor calidad de vida, buscando generar empleos con gente preparada y culta, que defienda sus derechos, que sepa sus obligaciones y que contribuya con el crecimiento del país. Por lo anterior la importancia de garantizar congruencia entre políticas Nacionales y Estatales.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense de Educación para Adultos 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense de Educación para Adultos 2023-2028.pdf",
       "booksIndex": "275"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense de Financiamiento a la Educación Superior 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense de Financiamiento a la Educación Superior 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
       "descriptionBook": "Con la estructuración del Plan lnstitucional de Desarrollo del Instituto Hidalguense de Financiamiento a la Educación Superior 2023-2028, se establecen las condiciones para trazar un rumbo certero para el Financiamiento Educativo, en donde la definición de una adecuada estructura programática, bajo el marco de la planeación basada en resultados eficaces, permita garantizar el éxito de la articulación entre la planeación estratégica y la prospectiva con la programación presupuestal en la asignación de los recursos, constituyendo así una herramienta de trabajo para seguir un camino que asegure un verdadero apoyo para los estudiantes hidalguenses de nivel superior, con solidez metodológica.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense de Financiamiento a la Educación Superior 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense de Financiamiento a la Educación Superior 2023-2028.pdf",
       "booksIndex": "276"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense de la Juventud 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense de la Juventud 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El propósito general del Programa lnstitucional de Desarrollo del lnstituto Hidalguense de la Juventud 2022-2028 es lograr que más jovenes tengan acceso a los programas sociales a través de una instancia de gobierno que camina de la mano con ellos y lucha por defender sus intereses, dicho programa fue elaborado mediante la Guía Metodológica para la Elaboración de los Programas lnstitucionales de Desarrollo 2023-2028, emitidos por la Unidad de Planeación y Prospectiva de Hidalgo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense de la Juventud 2023-2028.pdf",
+      "descriptionBook": "El propósito general del Programa de Desarrollo del lnstituto Hidalguense de la Juventud 2022-2028 es lograr que más jovenes tengan acceso a los programas sociales a través de una instancia de gobierno que camina de la mano con ellos y lucha por defender sus intereses, dicho programa fue elaborado mediante la Guía Metodológica para la Elaboración de los Programas lnstitucionales de Desarrollo 2023-2028, emitidos por la Unidad de Planeación y Prospectiva de Hidalgo.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense de la Juventud 2023-2028.pdf",
       "booksIndex": "277"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense de las Mujeres 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense de las Mujeres 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa lnstitucional de Desarrollo del lnstituto Hidalguense de las Mujeres, en consonancia con los objetivos de la política del Gobernador Julio Menchaca Salazar, expresados en los acuerdos del Plan Estatal de Desarrollo 2022-2028, abre un horizonte de posibilidades, pone en el centro y por delante las prioridades de las mujeres y niñas históricamente mas relegadas del Estado.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense de las Mujeres 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del lnstituto Hidalguense de las Mujeres, en consonancia con los objetivos de la política del Gobernador Julio Menchaca Salazar, expresados en los acuerdos del Plan Estatal de Desarrollo 2022-2028, abre un horizonte de posibilidades, pone en el centro y por delante las prioridades de las mujeres y niñas históricamente mas relegadas del Estado.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense de las Mujeres 2023-2028.pdf",
       "booksIndex": "278"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense del Deporte 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense del Deporte 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El presente Programa Institucional de Desarrollo cuenta con un diagnóstico específico del sector, así mismo con los mecanismos de participación ciudadana, contando en su estructura programática con cuatro objetivos, ventidos líneas de acción enfocadas a reducir comportamientos sedentarios iniciando este proceso desde la niñez debido a que la sociedad actualmente no realiza actividad física suficiente por diversas causas como el desarrollo de la tecnología, ya que gracias al surgimiento de aparatos electrónicos como teléfonos inteligentes, tabletas, consolas de videojuegos, las personas tanto adultas como niños ahora invierten mas su tiempo en la utilización de dichos aparatos, aunado a la falta de tiempo, cansancio por el trabajo yproblemas de salud.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense del Deporte 2023-2028.pdf",
+      "descriptionBook": "El presente Programa de Desarrollo cuenta con un diagnóstico específico del sector, así mismo con los mecanismos de participación ciudadana, contando en su estructura programática con cuatro objetivos, ventidos líneas de acción enfocadas a reducir comportamientos sedentarios iniciando este proceso desde la niñez debido a que la sociedad actualmente no realiza actividad física suficiente por diversas causas como el desarrollo de la tecnología, ya que gracias al surgimiento de aparatos electrónicos como teléfonos inteligentes, tabletas, consolas de videojuegos, las personas tanto adultas como niños ahora invierten mas su tiempo en la utilización de dichos aparatos, aunado a la falta de tiempo, cansancio por el trabajo yproblemas de salud.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense del Deporte 2023-2028.pdf",
       "booksIndex": "279"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense para Devolver al Pueblo lo Robado 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense para Devolver al Pueblo lo Robado 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
       "descriptionBook": "El presente documento se erige como un compendio organizado y sistemático que aborda diversos aspectos cruciales del organismo y ofrece una hoja de ruta que invita a explorar las complejidades y desafíos que se enfrentan a nivel internacional, nacional, estatal y regional. Asimismo, se proporcionan las estrategias y acciones concebidas para avanzar hacia sus metas. Su estructura está diseñada para facilitar la asimilación de información clave y promueve un análisis robusto, proporcionando una visión completa y detallada de la institución y sus operaciones.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense para Devolver al Pueblo lo Robado 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense para Devolver al Pueblo lo Robado 2023-2028.pdf",
       "booksIndex": "280"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto para la Atención de las y los Adultos Mayores del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Instituto para la Atención de las y los Adultos Mayores del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo del Instituto de Capacitación para la Atención de las y los Adultos Mayores del Estado de Hidalgo 2023-2028, plantea estrategias para sumar esfuerzos a los objetivos nacionales y estatales, con la visión del Presidente de la República, el gobernador del estado de Hidalgo y la Secretaría de Bienestar e Inclusión Social de impulsar el desarrollo integral en la vejez y generar mejores condiciones de vida en la población adulta mayor.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto para la Atención de las y los Adultos Mayores del Estado de Hidalgo 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del Instituto de Capacitación para la Atención de las y los Adultos Mayores del Estado de Hidalgo 2023-2028, plantea estrategias para sumar esfuerzos a los objetivos nacionales y estatales, con la visión del Presidente de la República, el gobernador del estado de Hidalgo y la Secretaría de Bienestar e Inclusión Social de impulsar el desarrollo integral en la vejez y generar mejores condiciones de vida en la población adulta mayor.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto para la Atención de las y los Adultos Mayores del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "281"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Tecnológico Superior de Huichapan 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Tecnológico Superior de Huichapan 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "El Programa Institucional de Desarrollo del Instituto Tecnológico Superior de Huichapan, inició con el conocimiento pleno de la situación geográfica, económica, social, cultural e histórica del estado de Hidalgo, municipio de Huichapan; en donde primordialmente se destaca el aprovechamiento de cada uno de los recursos renovables y no renovables, la educación de calidad y la búsqueda para abatir la desigualdad.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Tecnológico Superior de Huichapan 2023-2028.pdf",
+      "descriptionBook": "El Programa de Desarrollo del Instituto Tecnológico Superior de Huichapan, inició con el conocimiento pleno de la situación geográfica, económica, social, cultural e histórica del estado de Hidalgo, municipio de Huichapan; en donde primordialmente se destaca el aprovechamiento de cada uno de los recursos renovables y no renovables, la educación de calidad y la búsqueda para abatir la desigualdad.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Tecnológico Superior de Huichapan 2023-2028.pdf",
       "booksIndex": "282"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Museo Interactivo para la Niñez y la Juventud Hidalguense \"El Rehilete\" 2023-2028",
+      "name": "Programa de Desarrollo del Museo Interactivo para la Niñez y la Juventud Hidalguense \"El Rehilete\" 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
-      "descriptionBook": "EI Programa Institucional de Desarrollo del Museo Interactivo para la Niñez y la Juventud Hidalguense \"El Rehilete\", es una herramienta apegada a políticas públicas, en la que se establecen los fundamentos y lineamientos para alcanzar objetivos a corto, mediano y largo plazo, así como las estrategias para la mejora continua del organismo, en concordancia con los objetivos establecidos en el Plan Estatal de Desarrollo 2023-2028, como son; disminuir el rezago educativo, promover la cultura y utilizar la ciencia y la tecnología como herramientas para lograr una transformación económica significativa.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Museo Interactivo para la Niñez y la Juventud Hidalguense \"El Rehilete\" 2023-2028.pdf",
+      "descriptionBook": "EI Programa de Desarrollo del Museo Interactivo para la Niñez y la Juventud Hidalguense \"El Rehilete\", es una herramienta apegada a políticas públicas, en la que se establecen los fundamentos y lineamientos para alcanzar objetivos a corto, mediano y largo plazo, así como las estrategias para la mejora continua del organismo, en concordancia con los objetivos establecidos en el Plan Estatal de Desarrollo 2023-2028, como son; disminuir el rezago educativo, promover la cultura y utilizar la ciencia y la tecnología como herramientas para lograr una transformación económica significativa.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Museo Interactivo para la Niñez y la Juventud Hidalguense \"El Rehilete\" 2023-2028.pdf",
       "booksIndex": "283"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Sistema de Transporte Convencional de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Sistema de Transporte Convencional de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
       "descriptionBook": "El Programa de Desarrollo del Sistema de Transporte Convencional de Hidalgo (STCH) 2023-2028 es un instrumento de planeación estratégica clave para alcanzar objetivos establecidos en materia de movilidad, se fundamenta en el marco jurídico y busca fomentar la participación activa de la ciudadanía.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Sistema de Transporte Convencional de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Sistema de Transporte Convencional de Hidalgo 2023-2028.pdf",
       "booksIndex": "284"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Sistema Integrado de Transporte Masivo de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Sistema Integrado de Transporte Masivo de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
       "descriptionBook": "El Presente Programa se aboca a establecer las acciones que regiran nuestras actividades en el corto, media no y largo plazo; cada una de ellas se ha construido bajo un enfoque donde exista concordancia entre los derechos y obligaciones de todos los sujetos de la movilidad, asi como a la promoción respetuosa con el entorno ambiental y promoviendo la seguridad vial, a partir del proceso de participacin ciudadana a través de Foros lnstitucionales de Grupos Focales, conformados por académicos, expertos y tomadores de decisiones de los diferentes sectores involucrados en la dinámica socio económica del estado.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Sistema Integrado de Transporte Masivo de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Sistema Integrado de Transporte Masivo de Hidalgo 2023-2028.pdf",
       "booksIndex": "285"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Sistema para el Desarrollo Integral de la Familia del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Sistema para el Desarrollo Integral de la Familia del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023",
       "descriptionBook": "El Sistema para el Desarrollo Integral de las Familia del estado de Hidalgo como organismo descentralizado se alinea y ejecuta la política nacional de asistencia social, es promotor de la protección integral de los derechos de las niñas, niños y adolescentes, bajo el imperativo constitucional del interés superior de la niñez, fomentando y promoviendo el desarrollo del individuo, de la familia y la comunidad, que se vean afectados en sus condiciones sociales, físicas y mentales, principalmente a la población hidalguense pertenecientes a grupos prioritarios.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Sistema para el Desarrollo Integral de la Familia del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Sistema para el Desarrollo Integral de la Familia del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "286"
     },
     {
@@ -3543,135 +3543,135 @@ export const datosBibliotecaDigital = {
       "booksIndex": "322"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Tecnológica de la Sierra Hidalguense del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Tecnológica de la Sierra Hidalguense del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Establecer acciones en torno a la formación de profesionistas de licenciatura y posgrado, para atención a las necesidades de los sectores privado y público por medio de servicios educativos innovadores y de calidad, a través del desarrollo tecnológico e investigación.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID de la Universidad Tecnológica de la Sierra Hidalguense del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID de la Universidad Tecnológica de la Sierra Hidalguense del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "323"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Tecnológica de Mineral de la Reforma del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Tecnológica de Mineral de la Reforma del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Garantizar la mejora de la educación, a través del aprendizaje fomentando la innovación y el desarrollo tecnológico, e impulsar la inclusión educativa y la equidad en el acceso a la educación.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID de la Universidad Tecnológica de Mineral de la Reforma del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID de la Universidad Tecnológica de Mineral de la Reforma del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "324"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Colegio de Estudios, Científicos y Tecnológicos del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Colegio de Estudios, Científicos y Tecnológicos del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Establecer un programa de que brinde educación integral y formación profesional a los estudiantes, proporcionándoles los conocimientos, habilidades y valores necesarios para su desarrollo personal, académico y profesional.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID del Colegio de Estudios, Científicos y Tecnológicos del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID del Colegio de Estudios, Científicos y Tecnológicos del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "325"
     },
     {
-      "name": "Programa Institucional de Desarrollo de El Colegio del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de El Colegio del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Formar investigadores capacitados a través de una educación de calidad, que contribuyan al desarrollo social y económico del Estado de Hidalgo y del país, a través de programas formativos que promuevan valores como la responsabilidad, el respeto, la solidaridad y el trabajo en equipo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de El Colegio del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de El Colegio del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "326"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Digital del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Digital del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Formar profesionales de calidad en los diferentes campos disciplinarios, en busca del bienestar de la ciudadanía dotando a los estudiantes de competencias técnicas y prácticas que les permitan insertarse en el ámbito laboral.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Digital del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Digital del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "327"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Politécnica de la Energía del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Politécnica de la Energía del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Proporcionar una formación sólida que prepare a los estudiantes para el futuro, tanto en el ámbito académico como personal, facilitando su transición hacia estudios superiores o su integración a la vida profesional.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID de la Universidad Politécnica de la Energía del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID de la Universidad Politécnica de la Energía del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "328"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Tecnológica de Tulancingo del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo de la Universidad Tecnológica de Tulancingo del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Proporcionar a los estudiantes una educación integral, que combine la teoría con la práctica, y que los prepare para afrontar desafíos profesionales y académicos en un entorno globalizado.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID de la Universidad Tecnológica de Tulancingo del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID de la Universidad Tecnológica de Tulancingo del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "329"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Centro de Conciliación Laboral del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Centro de Conciliación Laboral del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Fomentar una cultura laboral basada en el diálogo, la cooperación y la negociación, evitando la confrontación y los enfrentamientos, a través de la resolución efectiva de disputas, se busca fortalecer la relación entre empleadores y empleados, promoviendo un ambiente de trabajo más armónico y productivo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Centro de Conciliación Laboral del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Centro de Conciliación Laboral del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "330"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Centro de Justicia para Mujeres del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Centro de Justicia para Mujeres del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Garantizar una atención integral, especializada y accesible para las mujeres que han sufrido violencia, con el propósito de proteger sus derechos, garantizar su acceso a la justicia y contribuir a su recuperación y empoderamiento.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID del Centro de Justicia para Mujeres del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID del Centro de Justicia para Mujeres del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "331"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Colegio de Educación Profesional Técnica del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Colegio de Educación Profesional Técnica del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Asegurar que los estudiantes adquieran competencias generales como liderazgo, trabajo en equipo, comunicación efectiva, etc. que les permitan desenvolverse con éxito en el entorno profesional y social.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID del Colegio de Educación Profesional Técnica del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID del Colegio de Educación Profesional Técnica del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "332"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Promover el aprendizaje práctico, buscando que los egresados tengan una inserción efectiva en el mercado laboral y contribuyan al desarrollo socioeconómico de su entorno.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "333"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Tecnológico Superior del Oriente del Estado de Hidalgo 2023-2028",
+      "name": "Programa de Desarrollo del Instituto Tecnológico Superior del Oriente del Estado de Hidalgo 2023-2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Impulsar la investigación científica, tecnológica, fomentando la innovación y el desarrollo de soluciones en la generación de conocimiento y en la formación de profesionales con capacidad de liderazgo.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/PID del Instituto Tecnológico Superior del Oriente del Estado de Hidalgo 2023-2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/PID del Instituto Tecnológico Superior del Oriente del Estado de Hidalgo 2023-2028.pdf",
       "booksIndex": "334"
     },
     {
@@ -3774,80 +3774,80 @@ export const datosBibliotecaDigital = {
       "booksIndex": "343"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense para el Desarrollo Municipal 2023 - 2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense para el Desarrollo Municipal 2023 - 2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Documento que tiene como objetivo general impulsar el desarrollo municipal mediante acciones que fortalezcan el desempeño de las autoridades municipales y busca mejorar la calidad de los servicios públicos y la eficiencia en la gestión gubernamental a nivel local.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense para el Desarrollo Municipal 2023 - 2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense para el Desarrollo Municipal 2023 - 2028.pdf",
       "booksIndex": "344"
     },
     {
-      "name": "Programa Institucional de Desarrollo del Instituto Hidalguense para la Infraestructura Física Educativa 2023 - 2028",
+      "name": "Programa de Desarrollo del Instituto Hidalguense para la Infraestructura Física Educativa 2023 - 2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Documento que tiene como objetivo principal mejorar la calidad y cobertura de la infraestructura educativa en el estado de Hidalgo. Esto se logra a través de la construcción, rehabilitación, equipamiento y mantenimiento de espacios educativos, con el fin de proporcionar entornos de aprendizaje seguros, funcionales y accesibles para todos los estudiantes.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo del Instituto Hidalguense para la Infraestructura Física Educativa 2023 - 2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo del Instituto Hidalguense para la Infraestructura Física Educativa 2023 - 2028.pdf",
       "booksIndex": "345"
     },
     {
-      "name": "Programa Institucional de Desarrollo de Radio y Televisión de Hidalgo 2023 - 2028",
+      "name": "Programa de Desarrollo de Radio y Televisión de Hidalgo 2023 - 2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "El programa busca fortalecer la función pública de los medios de comunicación estatales al desarrollar contenidos que apoyen la educación escolarizada y promuevan la identidad cultural de Hidalgo, producir programas informativos que sean relevantes para la población hidalguense, y actualizar y modernizar los procesos y plataformas para ofrecer un servicio de calidad.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de Radio y Televisión de Hidalgo 2023 - 2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de Radio y Televisión de Hidalgo 2023 - 2028.pdf",
       "booksIndex": "346"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Tecnológica Minera de Zimapán 2023 - 2028 ",
+      "name": "Programa de Desarrollo de la Universidad Tecnológica Minera de Zimapán 2023 - 2028 ",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Fortalecer la calidad, relevancia y sostenibilidad de la educación superior que oferta la Universidad Tecnológica Minera de Zimapán, a través de la innovación, la mejora continua y la articulación con los sectores productivo y social, para formar profesionales competentes, emprendedores y socialmente responsables, que contribuyan al desarrollo económico, social y ambiental de la región y del país, en alineación con los Objetivos de Desarrollo Sostenible (ODS) y los planes de desarrollo estatal y sectorial.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Tecnológica Minera de Zimapán 2023 - 2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Tecnológica Minera de Zimapán 2023 - 2028.pdf",
       "booksIndex": "347"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Universidad Politécnica de Francisco I Madero 2023 - 2028 ",
+      "name": "Programa de Desarrollo de la Universidad Politécnica de Francisco I Madero 2023 - 2028 ",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Contribuir al desarrollo social, científico, tecnológico, económico, y político de la nación, generando investigación en diversos ámbitos del conocimiento a través de un proceso colaborativo y dinámico en el que se descubre y explica el entorno, la planta académica dedicada a la investigación de la universidad se constituye como un cuerpo profesional altamente calificado, que cultivan y desarrollan un número importante y variado de líneas de investigación.\n\n",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Universidad Politécnica de Francisco I Madero 2023 - 2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Universidad Politécnica de Francisco I Madero 2023 - 2028.pdf",
       "booksIndex": "348"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Ciudad de las Mujeres del Estado de Hidalgo 2023 - 2028 ",
+      "name": "Programa de Desarrollo de la Ciudad de las Mujeres del Estado de Hidalgo 2023 - 2028 ",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
       "descriptionBook": "Documento que tiene como objetivo garantizar el acceso a servicios que contribuyan a la atención integral para las mujeres del Estado de Hidalgo, impulsar el empoderamiento y ejercicio pleno de los derechos de las mujeres del Estado de Hidalgo, mejorando su calidad de vida, e impulsar estrategias que contribuyan al bienestar y desarrollo pleno e integral de la niñez.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Ciudad de las Mujeres del Estado de Hidalgo 2023 - 2028.pdf",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Ciudad de las Mujeres del Estado de Hidalgo 2023 - 2028.pdf",
       "booksIndex": "349"
     },
     {
-      "name": "Programa Institucional de Desarrollo de la Comisión Ejecutiva de Atención a Víctimas del Estado de Hidalgo 2023 - 2028",
+      "name": "Programa de Desarrollo de la Comisión Ejecutiva de Atención a Víctimas del Estado de Hidalgo 2023 - 2028",
       "types": [
         "programas"
       ],
       "subcategory": "institucional",
       "año": "2023-2028",
-      "descriptionBook": "Fortalecer los servicios multidisciplinarios para la atención a las víctimas de delitos y violaciones a sus derechos humanos, facilitando su reincorporación al entorno social, fomentar la coordinación interinstitucional asegurando una atención adecuada y oportuna a las víctimas de delitos, mediante la creación de convenios de colaboración efectivos, e implementar mecanismos eficaces de atención, asistencia y protección garantizando la reparación integral del daño a las víctimas de delitos.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas Institucionales/Programa Institucional de Desarrollo de la Comisión Ejecutiva de Atención a Víctimas del Estado de Hidalgo 2023 - 2028.pdf",
+      "descriptionBook": "Fortalecer los servicios multidisciplinarios para la atención a las víctimas de delitos y violaciones a sus derechos humanos, facilitando su reincorporación al entorno social, fomentar la coordinación entre instituciones asegurando una atención adecuada y oportuna a las víctimas de delitos, mediante la creación de convenios de colaboración efectivos, e implementar mecanismos eficaces de atención, asistencia y protección garantizando la reparación integral del daño a las víctimas de delitos.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Programas%20%49%6E%73%74%69%74%75%63%69%6F%6E%61%6C%65%73/Programa de Desarrollo de la Comisión Ejecutiva de Atención a Víctimas del Estado de Hidalgo 2023 - 2028.pdf",
       "booksIndex": "350"
     },
     {
@@ -4896,14 +4896,14 @@ export const datosBibliotecaDigital = {
       "booksIndex": "445"
     },
     {
-      "name": "Guía Metodológica para la Actualización de los Programas Institucionales de Desarrollo 2022-2028",
+      "name": "Guía Metodológica para la Actualización de los Programas de Desarrollo 2022-2028",
       "types": [
         "guías"
       ],
       "subcategory": "institucional",
       "año": "2022-2028",
-      "descriptionBook": "La Guía Metodológica para la Actualización de los Programas Institucionales de Desarrollo 2022-2028 es un instrumento técnico que establece los criterios, lineamientos y procedimientos para la actualización de los Programas Institucionales de Desarrollo de los organismos de la administración pública estatal. Su objetivo es asegurar que estos programas mantengan congruencia con la Actualización del Plan Estatal de Desarrollo 2022-2028, así como con las prioridades gubernamentales, los objetivos estratégicos y los principios de planeación orientados a resultados. Asimismo, la guía busca fortalecer la calidad de la planeación institucional mediante la definición de objetivos, estrategias, acciones e indicadores que permitan orientar, dar seguimiento y evaluar el desempeño de las políticas públicas en beneficio de la población hidalguense.",
-      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Guías/Guía Metodológica para la Actualización de los Programas Institucionales de Desarrollo 2022-2028.pdf",
+      "descriptionBook": "La Guía Metodológica para la Actualización de los Programas de Desarrollo 2022-2028 es un instrumento técnico que establece los criterios, lineamientos y procedimientos para la actualización de los Programas de Desarrollo de los organismos de la administración pública estatal. Su objetivo es asegurar que estos programas mantengan congruencia con la Actualización del Plan Estatal de Desarrollo 2022-2028, así como con las prioridades gubernamentales, los objetivos estratégicos y los principios de planeación orientados a resultados. Asimismo, la guía busca fortalecer la calidad de la planeación mediante la definición de objetivos, estrategias, acciones e indicadores que permitan orientar, dar seguimiento y evaluar el desempeño de las políticas públicas en beneficio de la población hidalguense.",
+      "pdfSrc": "https://bibliotecadigitaluplaph.hidalgo.gob.mx/Biblioteca Digital de Planeación/Guías/Guía Metodológica para la Actualización de los Programas de Desarrollo 2022-2028.pdf",
       "booksIndex": "446"
     },
     {

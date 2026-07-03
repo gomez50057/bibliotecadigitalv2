@@ -1,4 +1,9 @@
-﻿import BibliotecaDigitalLogo from "@/components/brand/BibliotecaDigitalLogo";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import BibliotecaDigitalLogo from "@/components/brand/BibliotecaDigitalLogo";
+import { isActivePath, MAIN_NAV_LINKS } from "@/config/navigation";
 import { CATEGORY_LABELS, SUBCATEGORY_LABELS } from "@/config/taxonomy";
 import { normalizeText, searchIncludes } from "@/utils/normalizeText";
 import styles from "./BibliotecaDigital3D.module.css";
@@ -8,6 +13,8 @@ export default function LibraryHeader({
   totalGeneral,
   activeFilterCount
 }) {
+  const pathname = usePathname();
+
   return (
     <header className={styles.header}>
       <div className={styles.brandBlock}>
@@ -15,9 +22,20 @@ export default function LibraryHeader({
         <BibliotecaDigitalLogo compact className={styles.mobileLogo} />
         <div>
           <p>Gobierno del Estado de Hidalgo</p>
-          <span>{totalGeneral} documentos institucionales</span>
+          <span>{totalGeneral} documentos</span>
           {activeFilterCount > 0 && <small>{total} visibles con filtros</small>}
         </div>
+        <nav className={styles.headerNav} aria-label="Navegación principal">
+          {MAIN_NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              className={isActivePath(pathname, link.match) ? styles.navActive : ""}
+              href={link.href}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );

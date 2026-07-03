@@ -1,24 +1,23 @@
-.frame {
-  position: relative;
-  display: inline-block;
-  width: min(310px, 27vw);
-  aspect-ratio: 2.44 / 1;
+.group {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--logo-gap, 14px);
   flex: 0 0 auto;
+  max-width: var(--logo-max-width, none);
+  white-space: nowrap;
 }
 
-.frame img {
+.logoImage {
+  display: block;
+  width: auto;
+  height: var(--logo-height, clamp(34px, 4.6vw, 58px));
   object-fit: contain;
 }
 
 .compact {
-  width: 58px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+  gap: var(--logo-gap, 6px);
 }
 
-.compact img {
-  width: 244% !important;
-  max-width: none !important;
-  object-fit: cover;
-  object-position: left center;
+.compact .logoImage {
+  height: var(--logo-height, clamp(24px, 7vw, 34px));
 }

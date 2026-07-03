@@ -1,4 +1,6 @@
 import { Montserrat } from "next/font/google";
+import Footer from '@/components/shared/Footer';
+import GoogleAnalytics from '@/components/shared/GoogleAnalytics';
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -51,7 +53,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={montserrat.variable}>
-      <body>{children}</body>
+      <GoogleAnalytics />
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

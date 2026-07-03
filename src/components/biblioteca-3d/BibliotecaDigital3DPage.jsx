@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CATEGORY_LABELS, LIBRARY_TAXONOMY, SUBCATEGORY_LABELS } from "@/config/taxonomy";
-import { libraryDocuments, pendingClassification } from "@/data/libraryDocuments";
+import { libraryDocuments } from "@/data/libraryDocuments";
 import { chunkBooks } from "@/utils/chunkBooks";
 import { fuzzyIncludes, normalizeText, searchIncludes } from "@/utils/normalizeText";
 import BibliotecaDigitalLogo from "@/components/brand/BibliotecaDigitalLogo";
@@ -64,21 +64,6 @@ export default function BibliotecaDigital3DPage() {
     url.searchParams.delete("doc");
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
   };
-
-  useEffect(() => {
-    const onKeyDown = (event) => {
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-        event.preventDefault();
-        document.querySelector('input[type="search"]')?.focus();
-      }
-      if (event.key === "Escape") {
-        setSelectedDocument(null);
-        clearDocumentUrl();
-      }
-    };
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
 
   useEffect(() => {
     const desktop = window.matchMedia("(min-width: 701px)");
@@ -197,12 +182,31 @@ export default function BibliotecaDigital3DPage() {
     []
   );
   // ponytail: one page is one two-shelf block; mobile keeps the lighter list.
-  const pageSize = showCompact ? 50 : show3D ? 20 : 18;
+  const pageSize = showCompact ? 50 : show3D ? 24 : 18;
   const pages = useMemo(() => chunkBooks(activeDocuments, pageSize), [activeDocuments, pageSize]);
   const visibleDocuments = pages[page] || [];
   const shareUrl = selectedDocument && typeof window !== "undefined"
     ? `${window.location.origin}/?doc=${encodeURIComponent(selectedDocument.id)}`
     : "";
+
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      const target = event.target;
+      if (target instanceof HTMLElement && target.matches("input, textarea, select, [contenteditable='true']")) return;
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        document.querySelector('input[type="search"]')?.focus();
+      }
+      if (event.key === "Escape") {
+        setSelectedDocument(null);
+        clearDocumentUrl();
+      }
+      if (event.key === "ArrowLeft") setPage((current) => Math.max(0, current - 1));
+      if (event.key === "ArrowRight") setPage((current) => Math.min(Math.max(0, pages.length - 1), current + 1));
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [pages.length]);
 
   const selectDocument = (document, updateUrl = true) => {
     setSelectedDocument(document);
@@ -255,10 +259,6 @@ export default function BibliotecaDigital3DPage() {
     clearDocumentUrl();
   };
 
-  const copyCitation = async (document) => {
-    await navigator.clipboard.writeText(`Gobierno del Estado de Hidalgo. (${document.year}). ${document.title}. Biblioteca Digital de Planeación. ${document.url}`);
-  };
-
   useEffect(() => {
     const documentId = new URLSearchParams(window.location.search).get("doc");
     if (!documentId) return;
@@ -308,7 +308,7 @@ export default function BibliotecaDigital3DPage() {
       <section className={styles.libraryShell}>
         <div className={styles.roomTopbar}>
           <div>
-            <span>Acervo institucional / Sala principal</span>
+            <span>Acervo / Sala principal</span>
             <h1>
               Explora los instrumentos de planeación
               <em className={styles.h1Accent}> de la Biblioteca Digital</em>
@@ -389,7 +389,7 @@ export default function BibliotecaDigital3DPage() {
           ))}
         </div>
 
-        <div className={styles.sceneFrame}>
+        <div className={`${styles.sceneFrame} ${!show3D ? styles.listSceneFrame : ""}`}>
           {show3D && <Loading3D />}
           {show3D && (
             <LibraryCanvas
@@ -424,7 +424,6 @@ export default function BibliotecaDigital3DPage() {
                       <td data-label="Acciones">
                         <button type="button" onClick={() => selectDocument(document)}>Ver</button>
                         <a href={document.url} target="_blank" rel="noreferrer">Abrir</a>
-                        <button type="button" onClick={() => copyCitation(document)}>Cita</button>
                       </td>
                     </tr>
                   ))}
@@ -463,7 +462,7 @@ export default function BibliotecaDigital3DPage() {
             </div>
           )}
 
-          <div className={styles.pagination}>
+          <div className={`${styles.pagination} ${!show3D ? styles.listPagination : ""}`}>
             <button disabled={page === 0} onClick={() => setPage((current) => Math.max(0, current - 1))} aria-label="Página anterior">
               <svg aria-hidden="true" viewBox="0 0 24 24" className={styles.paginationIcon}>
                 <path d="m15 18-6-6 6-6" />
@@ -496,11 +495,6 @@ export default function BibliotecaDigital3DPage() {
           </>
         )}
       </AnimatePresence>
-
-      <footer className={styles.footer}>
-        <span>Biblioteca Digital de Planeación - Hidalgo</span>
-        <span>{pendingClassification.length} pendientes de clasificación técnica</span>
-      </footer>
     </main>
   );
 }

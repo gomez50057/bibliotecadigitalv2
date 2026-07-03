@@ -30,7 +30,7 @@ export function adaptDocument(item, index) {
     categoryKey,
     subcategory,
     year: String(item.año || "Sin año"),
-    description: item.descriptionBook || "Documento institucional de planeación.",
+    description: item.descriptionBook || "Documento de planeación.",
     type: "PDF",
     url: item.pdfSrc,
     booksIndex: String(item.booksIndex || index + 1),

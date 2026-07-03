@@ -3,10 +3,13 @@ node_modules/
 
 # Next.js
 .next/
+.next.bad-*/
 out/
 
 # local env
 .env
+.env.development
+.env.production
 .env*.local
 
 # logs
