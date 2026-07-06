@@ -14,6 +14,9 @@ const tabs = [
   ["rejected", "Rechazados"],
 ];
 const PAGE_SIZE = 6;
+const RECOGNITION_FONT_MIN = 8;
+const RECOGNITION_FONT_MAX = 40;
+const RECOGNITION_FONT_DEFAULT = 24;
 
 function emailResultText(email) {
   if (!email) return "";
@@ -43,7 +46,7 @@ export default function ValidatorPanelPage() {
     send_email: false,
     review_observations: "",
     recipient_name: "",
-    name_font_size: 48,
+    name_font_size: RECOGNITION_FONT_DEFAULT,
   });
 
   useEffect(() => {
@@ -82,7 +85,7 @@ export default function ValidatorPanelPage() {
       send_email: Boolean(modalData.resend),
       review_observations: "",
       recipient_name: modalData.document?.full_name || "",
-      name_font_size: 48,
+      name_font_size: RECOGNITION_FONT_DEFAULT,
     });
     setModal(modalData);
   };
@@ -223,8 +226,8 @@ export default function ValidatorPanelPage() {
                     Tamaño del nombre: {reviewOptions.name_font_size}px
                     <input
                       type="range"
-                      min="24"
-                      max="140"
+                      min={RECOGNITION_FONT_MIN}
+                      max={RECOGNITION_FONT_MAX}
                       value={reviewOptions.name_font_size}
                       onChange={(event) => setReviewOptions((current) => ({ ...current, name_font_size: Number(event.target.value) }))}
                     />
