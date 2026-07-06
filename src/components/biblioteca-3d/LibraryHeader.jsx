@@ -50,7 +50,8 @@ export function LibraryFilters({
   onQuickFilter,
   autocompleteDocuments,
   onSearchSelect,
-  activeFilterCount
+  activeFilterCount,
+  allowAllCategories = false
 }) {
   const query = normalizeText(filters.query);
   const filterLabel = `${activeFilterCount} ${activeFilterCount === 1 ? "filtro activo" : "filtros activos"}`;
@@ -99,6 +100,7 @@ export function LibraryFilters({
 
         <div className={styles.selectRow}>
           <select value={filters.category} onChange={update("category")} aria-label="Filtrar por categoría">
+            {allowAllCategories && <option value="">Todas las categorías</option>}
             {categoryOptions.map((key) => <option key={key} value={key}>{CATEGORY_LABELS[key]}</option>)}
           </select>
           <select value={filters.subcategory} onChange={update("subcategory")} aria-label="Filtrar por subcategoría">

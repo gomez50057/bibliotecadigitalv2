@@ -19,7 +19,7 @@ const LibraryCanvas = dynamic(() => import("./LibraryCanvas"), {
 });
 
 const CATEGORY_KEYS = Object.keys(LIBRARY_TAXONOMY);
-const INITIAL_FILTERS = { query: "", category: "planes", subcategory: "", year: "", order: "recent", recent: false };
+const defaultFilters = (category = "planes") => ({ query: "", category, subcategory: "", year: "", order: "recent", recent: false });
 
 function latestYear(value) {
   return Math.max(...String(value).match(/\d{4}/g)?.map(Number) || [0]);
@@ -47,9 +47,17 @@ function documentMatchesFilters(document, filters, ignoredFilters = []) {
     && (ignored.has("year") || !filters.year || document.year === filters.year);
 }
 
-export default function BibliotecaDigital3DPage() {
-  const [filters, setFilters] = useState(INITIAL_FILTERS);
-  const [activeCategory, setActiveCategory] = useState("planes");
+export default function BibliotecaDigital3DPage({
+  documents = libraryDocuments,
+  initialCategory = "planes",
+  roomLabel = "Acervo / Sala principal",
+  heading,
+  headingAccent,
+  emptyTitle = "No hay documentos en este estante"
+}) {
+  const initialFilters = useMemo(() => defaultFilters(initialCategory), [initialCategory]);
+  const [filters, setFilters] = useState(initialFilters);
+  const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [activeSubcategory, setActiveSubcategory] = useState("");
   const [page, setPage] = useState(0);
   const [selectedDocument, setSelectedDocument] = useState(null);
@@ -83,33 +91,33 @@ export default function BibliotecaDigital3DPage() {
 
   const categoryOptions = useMemo(
     () => CATEGORY_KEYS.filter((category) =>
-      libraryDocuments.some((document) =>
+      documents.some((document) =>
         document.categoryKey === category && documentMatchesFilters(document, filters, ["category", "query"])
       )
     ),
-    [filters]
+    [documents, filters]
   );
 
   const subcategoryOptions = useMemo(
     () => (LIBRARY_TAXONOMY[filters.category] || []).filter((subcategory) =>
-      libraryDocuments.some((document) =>
+      documents.some((document) =>
         document.subcategory === subcategory && documentMatchesFilters(document, filters, ["subcategory", "query"])
       )
     ),
-    [filters]
+    [documents, filters]
   );
 
   const years = useMemo(
-    () => [...new Set(libraryDocuments
+    () => [...new Set(documents
       .filter((document) => documentMatchesFilters(document, filters, ["year", "query"]))
       .map((document) => document.year))]
       .sort((a, b) => latestYear(b) - latestYear(a)),
-    [filters]
+    [documents, filters]
   );
 
   const filtered = useMemo(() => {
     const query = normalizeText(filters.query);
-    const result = libraryDocuments.filter((document) => {
+    const result = documents.filter((document) => {
       if (query) return searchIncludes(documentSearchText(document), query);
       return documentMatchesFilters(document, filters);
     });
@@ -118,13 +126,13 @@ export default function BibliotecaDigital3DPage() {
       if (filters.order === "oldest") return latestYear(a.year) - latestYear(b.year);
       return latestYear(b.year) - latestYear(a.year);
     });
-  }, [filters]);
+  }, [documents, filters]);
 
   useEffect(() => {
     if (filters.query.trim()) return;
     setFilters((current) => {
       const nextCategoryOptions = CATEGORY_KEYS.filter((category) =>
-        libraryDocuments.some((document) =>
+        documents.some((document) =>
           document.categoryKey === category && documentMatchesFilters(document, current, ["category"])
         )
       );
@@ -133,14 +141,14 @@ export default function BibliotecaDigital3DPage() {
         : nextCategoryOptions[0] || "";
       const categoryFilters = { ...current, category: nextCategory };
       const nextSubcategoryOptions = (LIBRARY_TAXONOMY[nextCategory] || []).filter((subcategory) =>
-        libraryDocuments.some((document) =>
+        documents.some((document) =>
           document.subcategory === subcategory && documentMatchesFilters(document, categoryFilters, ["subcategory"])
         )
       );
       const nextSubcategory = !current.subcategory || nextSubcategoryOptions.includes(current.subcategory)
         ? current.subcategory
         : "";
-      const nextYearOptions = libraryDocuments
+      const nextYearOptions = documents
         .filter((document) => documentMatchesFilters(document, { ...categoryFilters, subcategory: nextSubcategory }, ["year"]))
         .map((document) => document.year);
       const nextYear = !current.year || nextYearOptions.includes(current.year) ? current.year : "";
@@ -151,13 +159,20 @@ export default function BibliotecaDigital3DPage() {
 
       return { ...current, category: nextCategory, subcategory: nextSubcategory, year: nextYear };
     });
-  }, [filters.query, filters.category, filters.subcategory, filters.year]);
+  }, [documents, filters.query, filters.category, filters.subcategory, filters.year]);
+
+  useEffect(() => {
+    setFilters(initialFilters);
+    setActiveCategory(initialCategory);
+    setActiveSubcategory("");
+    setPage(0);
+  }, [initialFilters, initialCategory, documents]);
 
   const activeDocuments = useMemo(
     () => {
       if (isSearching) return filtered;
       return filtered.filter((document) =>
-        document.categoryKey === activeCategory
+        (!activeCategory || document.categoryKey === activeCategory)
         && (!activeSubcategory || document.subcategory === activeSubcategory)
       );
     },
@@ -171,22 +186,22 @@ export default function BibliotecaDigital3DPage() {
     filters.category,
     filters.subcategory,
     filters.year,
-    filters.order !== INITIAL_FILTERS.order
+    filters.order !== initialFilters.order
   ].filter(Boolean).length;
   const activeFilterText = `${activeFilterCount} ${activeFilterCount === 1 ? "filtro activo puede" : "filtros activos pueden"}`;
   const categoryCounts = useMemo(
     () => CATEGORY_KEYS.map((category) => ({
       key: category,
-      total: libraryDocuments.filter((document) => document.categoryKey === category).length
+      total: documents.filter((document) => document.categoryKey === category).length
     })),
-    []
+    [documents]
   );
   // ponytail: one page is one two-shelf block; mobile keeps the lighter list.
   const pageSize = showCompact ? 50 : show3D ? 24 : 18;
   const pages = useMemo(() => chunkBooks(activeDocuments, pageSize), [activeDocuments, pageSize]);
   const visibleDocuments = pages[page] || [];
   const shareUrl = selectedDocument && typeof window !== "undefined"
-    ? `${window.location.origin}/?doc=${encodeURIComponent(selectedDocument.id)}`
+    ? `${window.location.origin}${window.location.pathname}?doc=${encodeURIComponent(selectedDocument.id)}`
     : "";
 
   useEffect(() => {
@@ -222,11 +237,11 @@ export default function BibliotecaDigital3DPage() {
   };
 
   const autocompleteDocuments = useMemo(
-    () => libraryDocuments.map((document) => ({
+    () => documents.map((document) => ({
       ...document,
       searchText: documentSearchText(document)
     })),
-    []
+    [documents]
   );
 
   const showSearchDocument = (document) => {
@@ -238,7 +253,7 @@ export default function BibliotecaDigital3DPage() {
       year: ""
     };
     const query = normalizeText(document.title);
-    const searchResults = libraryDocuments
+    const searchResults = documents
       .filter((item) => searchIncludes(documentSearchText(item), query))
       .sort((a, b) => {
         if (searchFilters.order === "title") return a.title.localeCompare(b.title, "es");
@@ -262,15 +277,15 @@ export default function BibliotecaDigital3DPage() {
   useEffect(() => {
     const documentId = new URLSearchParams(window.location.search).get("doc");
     if (!documentId) return;
-    const directDocument = libraryDocuments.find((document) => document.id === documentId);
+    const directDocument = documents.find((document) => document.id === documentId);
     if (!directDocument) return;
-    const categoryDocuments = libraryDocuments.filter((document) => document.categoryKey === directDocument.categoryKey);
+    const categoryDocuments = documents.filter((document) => document.categoryKey === directDocument.categoryKey);
     setActiveCategory(directDocument.categoryKey);
     setActiveSubcategory("");
     setFilters((current) => ({ ...current, category: directDocument.categoryKey, subcategory: "" }));
     setPage(Math.max(0, Math.floor(categoryDocuments.findIndex((document) => document.id === documentId) / pageSize)));
     selectDocument(directDocument, false);
-  }, [pageSize]);
+  }, [documents, pageSize]);
 
   const chooseCategory = (category) => {
     setActiveCategory(category);
@@ -279,9 +294,9 @@ export default function BibliotecaDigital3DPage() {
 
   const quickFilter = (value) => {
     if (value === "clear") {
-      setFilters(INITIAL_FILTERS);
+      setFilters(initialFilters);
       setActiveSubcategory("");
-      setActiveCategory(INITIAL_FILTERS.category);
+      setActiveCategory(initialFilters.category);
       setPage(0);
       return;
     }
@@ -289,12 +304,12 @@ export default function BibliotecaDigital3DPage() {
       setFilters((current) => ({ ...current, order: "recent", recent: true }));
       return;
     }
-    const nextCategory = LIBRARY_TAXONOMY[activeCategory].includes(value)
+    const nextCategory = LIBRARY_TAXONOMY[activeCategory]?.includes(value)
       ? activeCategory
       : CATEGORY_KEYS.find((category) => LIBRARY_TAXONOMY[category].includes(value));
-    setActiveCategory(nextCategory || "planes");
+    setActiveCategory(nextCategory || initialFilters.category);
     setActiveSubcategory(value);
-    setFilters((current) => ({ ...current, category: nextCategory || "planes", subcategory: value }));
+    setFilters((current) => ({ ...current, category: nextCategory || initialFilters.category, subcategory: value }));
   };
 
   return (
@@ -308,10 +323,10 @@ export default function BibliotecaDigital3DPage() {
       <section className={styles.libraryShell}>
         <div className={styles.roomTopbar}>
           <div>
-            <span>Acervo / Sala principal</span>
+          <span>{roomLabel}</span>
             <h1>
-              Explora los instrumentos de planeación
-              <em className={styles.h1Accent}> de la Biblioteca Digital</em>
+              {heading || "Explora los instrumentos de planeación"}
+              <em className={styles.h1Accent}>{headingAccent || " de la Biblioteca Digital"}</em>
             </h1>
           </div>
           <div className={styles.roomStats}>
@@ -353,6 +368,7 @@ export default function BibliotecaDigital3DPage() {
           autocompleteDocuments={autocompleteDocuments}
           onSearchSelect={showSearchDocument}
           activeFilterCount={activeFilterCount}
+          allowAllCategories={!initialCategory}
         />
 
         <nav className={styles.categoryRail} aria-label="Categorías del acervo">
@@ -449,7 +465,7 @@ export default function BibliotecaDigital3DPage() {
           {!visibleDocuments.length && (
             <div className={styles.emptyState}>
               <span>⌕</span>
-              <h2>No hay documentos en este estante</h2>
+              <h2>{emptyTitle}</h2>
               <p>{activeFilterCount ? `${activeFilterText} estar limitando la vista.` : "Prueba otra categoría con documentos disponibles."}</p>
               {activeFilterCount > 0 && <button type="button" onClick={() => quickFilter("clear")}>Limpiar filtros</button>}
               <div className={styles.emptyCategories}>
