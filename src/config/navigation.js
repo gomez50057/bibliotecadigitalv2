@@ -1,6 +1,6 @@
 export const MAIN_NAV_LINKS = [
   { href: "/", label: "Biblioteca", match: "/" },
-  { href: "/documentos-aprobados", label: "Comparte y consulta", match: "/documentos-aprobados" },
+  { href: "/subir-documento", label: "Comparte documento", match: "/subir-documento" },
   { href: "/validador/login", label: "Acceder", match: "/validador" },
 ];
 

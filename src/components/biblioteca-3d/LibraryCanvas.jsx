@@ -164,6 +164,8 @@ function Book({ document, index, shelfIndex, selected, onSelect, tooltipPortal }
   const labelBorderColor = lightBook ? "#b8ad98" : "#a99b82";
   const pageColor = lightBook ? "#f8f4ea" : "#e9dfc7";
   const titleColor = "#202a31";
+  const spineTitleWidth = height * 0.52;
+  const spineTitleSize = Math.min(0.16, Math.sqrt((spineTitleWidth * width * 0.42) / (document.title.length * 0.72)));
   const spineColor = lightBook ? "#d6cfc0" : "#5d5146";
   const bookTexture = useBookTexture();
 
@@ -251,22 +253,23 @@ function Book({ document, index, shelfIndex, selected, onSelect, tooltipPortal }
         <meshStandardMaterial color="#7d1735" metalness={0.01} roughness={0.78} />
       </mesh>
       <Text
-        position={[0, -height * 0.08, depth / 2 + 0.057]}
+        position={[0, -height * 0.04, depth / 2 + 0.057]}
         rotation={[0, 0, Math.PI / 2]}
-        fontSize={0.17}
+        fontSize={spineTitleSize}
         color={titleColor}
-        maxWidth={height * 0.62}
+        maxWidth={spineTitleWidth}
+        lineHeight={1.05}
         textAlign="center"
         anchorX="center"
         anchorY="middle"
         outlineWidth={0}
       >
-        {document.shortTitle.toUpperCase()}
+        {document.title.toUpperCase()}
       </Text>
       <Text
-        position={[0, height * 0.31, depth / 2 + 0.058]}
-        fontSize={0.135}
-        color="#6a5f4c"
+        position={[0, height * 0.27, depth / 2 + 0.058]}
+        fontSize={0.095}
+        color={titleColor}
         maxWidth={width * 0.38}
         textAlign="center"
         anchorX="center"

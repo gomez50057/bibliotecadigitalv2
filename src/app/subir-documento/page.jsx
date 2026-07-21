@@ -4,7 +4,7 @@ import { useState } from "react";
 import DocumentWorkflowHeader from "@/components/document-workflow/DocumentWorkflowHeader";
 import WorkflowModal from "@/components/document-workflow/WorkflowModal";
 import styles from "@/components/document-workflow/DocumentWorkflow.module.css";
-import { CATEGORY_LABELS } from "@/config/taxonomy";
+import { LIBRARY_TAXONOMY, SUBCATEGORY_LABELS } from "@/config/taxonomy";
 import { MAX_FILE_SIZE_BYTES, UPLOAD_FILE_FIELDS, UPLOAD_LIMITS } from "@/config/upload";
 import { apiErrorMessage, apiUrl } from "@/utils/api";
 
@@ -13,7 +13,7 @@ const initialForm = {
   email: "",
   phone: "",
   document_name: "",
-  category: "planes",
+  category: "propuestas_ciudadanas",
   description: "",
   observations: "",
 };
@@ -177,8 +177,8 @@ export default function UploadDocumentPage() {
             <div className={`${styles.field} ${styles.full}`}>
               <label htmlFor="category">Categoría <span className={styles.requiredMark}>*</span></label>
               <select id="category" value={form.category} onChange={update("category")} required>
-                {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-                  <option key={key} value={key}>{label}</option>
+                {LIBRARY_TAXONOMY.ciudadanos.map((key) => (
+                  <option key={key} value={key}>{SUBCATEGORY_LABELS[key]}</option>
                 ))}
               </select>
             </div>

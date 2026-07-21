@@ -8,11 +8,7 @@ import { CATEGORY_LABELS, SUBCATEGORY_LABELS } from "@/config/taxonomy";
 import { normalizeText, searchIncludes } from "@/utils/normalizeText";
 import styles from "./BibliotecaDigital3D.module.css";
 
-export default function LibraryHeader({
-  total,
-  totalGeneral,
-  activeFilterCount
-}) {
+export default function LibraryHeader() {
   const pathname = usePathname();
 
   return (
@@ -20,11 +16,6 @@ export default function LibraryHeader({
       <div className={styles.brandBlock}>
         <BibliotecaDigitalLogo className={styles.desktopLogo} />
         <BibliotecaDigitalLogo compact className={styles.mobileLogo} />
-        <div>
-          <p>Gobierno del Estado de Hidalgo</p>
-          <span>{totalGeneral} documentos</span>
-          {activeFilterCount > 0 && <small>{total} visibles con filtros</small>}
-        </div>
         <nav className={styles.headerNav} aria-label="Navegación principal">
           {MAIN_NAV_LINKS.map((link) => (
             <Link
@@ -119,9 +110,14 @@ export function LibraryFilters({
         </div>
 
         <div className={styles.chips} aria-label="Filtros rápidos">
-          <span className={styles.filterCount}>{filterLabel}</span>
+          <span className={styles.filterCount}>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 5h16M7 12h10M10 19h4" />
+            </svg>
+            {filterLabel}
+          </span>
           <button className={filters.order === "recent" ? styles.chipActive : ""} onClick={() => onQuickFilter("recent")}>Más recientes</button>
-          {["nacional", "estatal", "municipal"].map((key) => (
+          {["nacional", "estatal", "municipales"].map((key) => (
             <button
               key={key}
               className={filters.subcategory === key ? styles.chipActive : ""}
@@ -130,7 +126,12 @@ export function LibraryFilters({
               {SUBCATEGORY_LABELS[key]}
             </button>
           ))}
-          <button disabled={!activeFilterCount} onClick={() => onQuickFilter("clear")}>Limpiar filtros</button>
+          <button disabled={!activeFilterCount} onClick={() => onQuickFilter("clear")}>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 7h16M10 11v6M14 11v6M6 7l1 14h10l1-14M9 7V4h6v3" />
+            </svg>
+            Limpiar filtros
+          </button>
         </div>
       </div>
     </div>

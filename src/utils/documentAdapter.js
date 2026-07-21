@@ -10,11 +10,6 @@ const COLORS = {
   reglamentos: ["#374151", "#4b5563", "#1f2937"]
 };
 
-function shortTitle(title) {
-  const words = title.replace(/\b(de|del|la|el|para|y|los|las)\b/gi, " ").split(/\s+/).filter(Boolean);
-  return words.slice(0, 4).join(" ").slice(0, 32);
-}
-
 export function adaptDocument(item, index) {
   const categoryKey = normalizeText(item.types?.[0]).replace(/\s+/g, "");
   const subcategory = normalizeText(item.subcategory || "inexistente");
@@ -25,7 +20,6 @@ export function adaptDocument(item, index) {
   return {
     id: `${categoryKey}-${item.booksIndex || index + 1}`,
     title: item.name,
-    shortTitle: shortTitle(item.name),
     category: categoryKey,
     categoryKey,
     subcategory,

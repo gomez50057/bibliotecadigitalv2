@@ -21,6 +21,12 @@ const LibraryCanvas = dynamic(() => import("./LibraryCanvas"), {
 const CATEGORY_KEYS = Object.keys(LIBRARY_TAXONOMY);
 const defaultFilters = (category = "planes") => ({ query: "", category, subcategory: "", year: "", order: "recent", recent: false });
 
+function ViewModeIcon({ mode }) {
+  if (mode === "librero") return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20h16M5 20V5h4v15M10 20V3h4v17M15 20V7h4v13" /></svg>;
+  if (mode === "portadas") return <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="7" rx="1" /><rect x="14" y="4" width="6" height="7" rx="1" /><rect x="4" y="14" width="6" height="6" rx="1" /><rect x="14" y="14" width="6" height="6" rx="1" /></svg>;
+  return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" /></svg>;
+}
+
 function latestYear(value) {
   return Math.max(...String(value).match(/\d{4}/g)?.map(Number) || [0]);
 }
@@ -66,6 +72,7 @@ export default function BibliotecaDigital3DPage({
   const [compactMode, setCompactMode] = useState(false);
   const searchRef = useRef(null);
   const tooltipPortal = useRef(null);
+  const modeDropdownRef = useRef(null);
 
   const clearDocumentUrl = () => {
     const url = new URL(window.location.href);
@@ -82,6 +89,14 @@ export default function BibliotecaDigital3DPage({
   }, []);
 
   useEffect(() => {
+    const closeModeMenu = (event) => {
+      if (!modeDropdownRef.current?.contains(event.target)) modeDropdownRef.current?.removeAttribute("open");
+    };
+    document.addEventListener("pointerdown", closeModeMenu);
+    return () => document.removeEventListener("pointerdown", closeModeMenu);
+  }, []);
+
+  useEffect(() => {
     setActiveCategory(filters.category);
     setActiveSubcategory(filters.subcategory);
     setPage(0);
@@ -91,16 +106,16 @@ export default function BibliotecaDigital3DPage({
 
   const categoryOptions = useMemo(
     () => CATEGORY_KEYS.filter((category) =>
-      documents.some((document) =>
-        document.categoryKey === category && documentMatchesFilters(document, filters, ["category", "query"])
+      category === "ciudadanos" || documents.some((document) =>
+        document.categoryKey === category
       )
     ),
-    [documents, filters]
+    [documents]
   );
 
   const subcategoryOptions = useMemo(
     () => (LIBRARY_TAXONOMY[filters.category] || []).filter((subcategory) =>
-      documents.some((document) =>
+      filters.category === "ciudadanos" || documents.some((document) =>
         document.subcategory === subcategory && documentMatchesFilters(document, filters, ["subcategory", "query"])
       )
     ),
@@ -132,8 +147,8 @@ export default function BibliotecaDigital3DPage({
     if (filters.query.trim()) return;
     setFilters((current) => {
       const nextCategoryOptions = CATEGORY_KEYS.filter((category) =>
-        documents.some((document) =>
-          document.categoryKey === category && documentMatchesFilters(document, current, ["category"])
+        category === "ciudadanos" || documents.some((document) =>
+          document.categoryKey === category
         )
       );
       const nextCategory = !current.category || nextCategoryOptions.includes(current.category)
@@ -141,7 +156,7 @@ export default function BibliotecaDigital3DPage({
         : nextCategoryOptions[0] || "";
       const categoryFilters = { ...current, category: nextCategory };
       const nextSubcategoryOptions = (LIBRARY_TAXONOMY[nextCategory] || []).filter((subcategory) =>
-        documents.some((document) =>
+        nextCategory === "ciudadanos" || documents.some((document) =>
           document.subcategory === subcategory && documentMatchesFilters(document, categoryFilters, ["subcategory"])
         )
       );
@@ -181,6 +196,7 @@ export default function BibliotecaDigital3DPage({
 
   const show3D = render3D && !accessibleMode && !compactMode;
   const showCompact = compactMode;
+  const viewMode = compactMode ? "lista" : accessibleMode ? "portadas" : "librero";
   const activeFilterCount = [
     filters.query.trim(),
     filters.category,
@@ -189,6 +205,10 @@ export default function BibliotecaDigital3DPage({
     filters.order !== initialFilters.order
   ].filter(Boolean).length;
   const activeFilterText = `${activeFilterCount} ${activeFilterCount === 1 ? "filtro activo puede" : "filtros activos pueden"}`;
+  const changeViewMode = (nextMode) => {
+    setAccessibleMode(nextMode === "portadas");
+    setCompactMode(nextMode === "lista");
+  };
   const categoryCounts = useMemo(
     () => CATEGORY_KEYS.map((category) => ({
       key: category,
@@ -314,11 +334,7 @@ export default function BibliotecaDigital3DPage({
 
   return (
     <main className={styles.page} ref={searchRef}>
-      <LibraryHeader
-        total={filtered.length}
-        totalGeneral={libraryDocuments.length}
-        activeFilterCount={activeFilterCount}
-      />
+      <LibraryHeader />
 
       <section className={styles.libraryShell}>
         <div className={styles.roomTopbar}>
@@ -330,31 +346,37 @@ export default function BibliotecaDigital3DPage({
             </h1>
           </div>
           <div className={styles.roomStats}>
-            <span><b>{activeDocuments.length}</b> documentos</span>
-            <span><b>{page + 1}</b> / {Math.max(pages.length, 1)} bloques</span>
-            <button
-              type="button"
-              className={styles.viewModeButton}
-              onClick={() => {
-                setCompactMode(false);
-                setAccessibleMode(show3D);
-              }}
-              disabled={!render3D}
-              aria-pressed={accessibleMode}
-            >
-              {show3D ? "Modo accesible" : "Modo 3D"}
-            </button>
-            <button
-              type="button"
-              className={styles.viewModeButton}
-              onClick={() => {
-                setAccessibleMode(false);
-                setCompactMode((current) => !current);
-              }}
-              aria-pressed={compactMode}
-            >
-              {compactMode ? "Salir compacto" : "Modo compacto"}
-            </button>
+            <div className={styles.documentCounter} aria-label={`${documents.length} documentos`}>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M6 2.8h8.2L19 7.6v13.6H6V2.8Z" />
+                <path d="M14 3v5h5" />
+                <path d="M9 12h7M9 15h7M9 18h5" />
+              </svg>
+              <div>
+                <strong>{documents.length}</strong>
+                <small>documentos</small>
+              </div>
+            </div>
+            <details className={styles.modeDropdown} ref={modeDropdownRef}>
+              <summary>
+                <ViewModeIcon mode={viewMode} />
+                Modo {viewMode === "librero" ? "Librero" : viewMode === "portadas" ? "Portadas" : "Lista"}
+              </summary>
+              <div className={styles.modeMenu}>
+                <button type="button" disabled={!render3D} onClick={(event) => { changeViewMode("librero"); event.currentTarget.closest("details")?.removeAttribute("open"); }}>
+                  <ViewModeIcon mode="librero" />
+                  Modo Librero
+                </button>
+                <button type="button" onClick={(event) => { changeViewMode("portadas"); event.currentTarget.closest("details")?.removeAttribute("open"); }}>
+                  <ViewModeIcon mode="portadas" />
+                  Modo Portadas
+                </button>
+                <button type="button" onClick={(event) => { changeViewMode("lista"); event.currentTarget.closest("details")?.removeAttribute("open"); }}>
+                  <ViewModeIcon mode="lista" />
+                  Modo Lista
+                </button>
+              </div>
+            </details>
           </div>
         </div>
 
@@ -455,7 +477,12 @@ export default function BibliotecaDigital3DPage({
                   <span className={styles.mobileBookCover} style={{ "--book-color": document.colorVariant }}>
                     <BibliotecaDigitalLogo compact className={styles.lightBookLogo} />
                     <small>{document.year}</small>
-                    <strong title={document.title}>{document.title}</strong>
+                    <strong
+                      title={document.title}
+                      style={{ fontSize: document.title.length > 120 ? "0.82rem" : document.title.length > 75 ? "1rem" : "1.18rem" }}
+                    >
+                      {document.title}
+                    </strong>
                   </span>
                 </button>
               ))}
