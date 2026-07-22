@@ -16,7 +16,7 @@ import * as THREE from "three";
 import { CATEGORY_LABELS, SUBCATEGORY_LABELS } from "@/config/taxonomy";
 import styles from "./BibliotecaDigital3D.module.css";
 
-const SHELF_Y = [3.05, -5.35];
+const SHELF_Y = [3.05, -6.8];
 const BOOKS_PER_SHELF = 12;
 const WOOD = "/textures/wood/walnut-premium.webp";
 const SHELF_SUPPORT_X = [-10.65, 10.65];
@@ -98,31 +98,35 @@ function StaticShelves({ activeCategory, documents }) {
                 <BrassMaterial roughness={0.34} />
               </RoundedBox>
             ))}
-            <RoundedBox position={[0, shelfY + 7.4, 1.02]} args={[8.1, 1.3, 0.11]} radius={0.035} smoothness={3} castShadow>
-              <meshStandardMaterial color="#e8e1d3" roughness={0.76} metalness={0.01} />
+            <RoundedBox position={[0, shelfY + 7.95, 1.02]} args={[9.2, 1.4, 0.12]} radius={0.18} smoothness={8} castShadow>
+              <meshStandardMaterial color="#8a1736" roughness={0.7} metalness={0.01} />
             </RoundedBox>
-            <RoundedBox position={[0, shelfY + 7.4, 1.105]} args={[7.45, 0.98, 0.055]} radius={0.02} smoothness={3} castShadow>
-              <meshStandardMaterial color={active ? "#7d1735" : "#554b50"} roughness={0.72} metalness={0.01} />
+            <RoundedBox position={[0, shelfY + 7.95, 1.095]} args={[9.08, 1.28, 0.055]} radius={0.16} smoothness={8}>
+              <meshStandardMaterial color="#fbfaf7" roughness={0.8} metalness={0} />
             </RoundedBox>
             <Text
-              position={[0, shelfY + 7.55, 1.15]}
-              fontSize={0.34}
-              color="#fff8e8"
-              maxWidth={6.35}
+              position={[0, shelfY + 8.17, 1.18]}
+              fontSize={Math.min(0.44, 7.4 / categoryLabel.length)}
+              color="#8a1736"
+              maxWidth={7.4}
+              whiteSpace="nowrap"
               anchorX="center"
               anchorY="middle"
-              outlineWidth={0.002}
-              outlineColor="#2d1715"
+              textAlign="center"
+              letterSpacing={0.1}
             >
               {categoryLabel.toUpperCase()}
             </Text>
             <Text
-              position={[0, shelfY + 7.2, 1.152]}
-              fontSize={0.21}
-              color="#ead7a5"
-              maxWidth={6.4}
+              position={[0, shelfY + 7.73, 1.182]}
+              fontSize={Math.min(0.23, 6.6 / sectionLabel.length)}
+              color="#8a1736"
+              maxWidth={7.4}
+              whiteSpace="nowrap"
               anchorX="center"
               anchorY="middle"
+              textAlign="center"
+              letterSpacing={0.055}
             >
               {sectionLabel.toUpperCase()}
             </Text>
@@ -341,7 +345,7 @@ function Scene({ documents, activeCategory, selectedDocument, onSelect, tooltipP
           tooltipPortal={tooltipPortal}
         />
       ))}
-      <ContactShadows position={[0, -6.1, 0.5]} opacity={0.24} scale={25} blur={2.6} far={5} resolution={512} color="#3b2118" />
+      <ContactShadows position={[0, -7.55, 0.5]} opacity={0.24} scale={25} blur={2.6} far={5} resolution={512} color="#3b2118" />
       <Environment resolution={256}>
         <Lightformer intensity={2.4} color="#fff0d5" position={[0, 5, 3]} scale={[7, 2, 1]} rotation-x={Math.PI / 2} />
         <Lightformer intensity={1.8} color="#b7dff0" position={[-6, 0, 2]} scale={[2, 6, 1]} rotation-y={Math.PI / 2} />
@@ -356,7 +360,7 @@ export default function LibraryCanvas(props) {
   return (
     <Canvas
       className={styles.canvas}
-      camera={{ position: [-0.2, 0.9, 26], fov: 48, near: 0.1, far: 44 }}
+      camera={{ position: [-0.2, 0.9, 29], fov: 48, near: 0.1, far: 48 }}
       dpr={[1, 1.5]}
       shadows
       gl={{ alpha: true, antialias: true, powerPreference: "high-performance", toneMapping: THREE.ACESFilmicToneMapping }}

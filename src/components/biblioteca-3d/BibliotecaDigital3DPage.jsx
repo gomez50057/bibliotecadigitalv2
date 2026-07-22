@@ -8,6 +8,7 @@ import { libraryDocuments } from "@/data/libraryDocuments";
 import { chunkBooks } from "@/utils/chunkBooks";
 import { fuzzyIncludes, normalizeText, searchIncludes } from "@/utils/normalizeText";
 import BibliotecaDigitalLogo from "@/components/brand/BibliotecaDigitalLogo";
+import ContributionBanner from "@/components/contribution-banner/ContributionBanner";
 import DocumentDetailPanel from "./DocumentDetailPanel";
 import LibraryHeader, { LibraryFilters } from "./LibraryHeader";
 import Loading3D from "./Loading3D";
@@ -56,7 +57,6 @@ function documentMatchesFilters(document, filters, ignoredFilters = []) {
 export default function BibliotecaDigital3DPage({
   documents = libraryDocuments,
   initialCategory = "planes",
-  roomLabel = "Acervo / Sala principal",
   heading,
   headingAccent,
   emptyTitle = "No hay documentos en este estante"
@@ -335,15 +335,18 @@ export default function BibliotecaDigital3DPage({
   return (
     <main className={styles.page} ref={searchRef}>
       <LibraryHeader />
+      <ContributionBanner />
 
       <section className={styles.libraryShell}>
         <div className={styles.roomTopbar}>
-          <div>
-          <span>{roomLabel}</span>
-            <h1>
-              {heading || "Explora los instrumentos de planeación"}
-              <em className={styles.h1Accent}>{headingAccent || " de la Biblioteca Digital"}</em>
-            </h1>
+          <div className={styles.roomIntro}>
+            <span className={styles.roomEyebrow}>Explora los</span>
+            <div className={styles.roomTitleLine}>
+              <h1>Instrumentos</h1>
+              <span className={styles.roomSlash} aria-hidden="true">/</span>
+              <em><span>de la</span> Biblioteca Digital</em>
+            </div>
+            <strong>De planeación</strong>
           </div>
           <div className={styles.roomStats}>
             <div className={styles.documentCounter} aria-label={`${documents.length} documentos`}>
@@ -354,13 +357,16 @@ export default function BibliotecaDigital3DPage({
               </svg>
               <div>
                 <strong>{documents.length}</strong>
-                <small>documentos</small>
+                <small>Instrumentos<br />disponibles</small>
               </div>
             </div>
             <details className={styles.modeDropdown} ref={modeDropdownRef}>
               <summary>
                 <ViewModeIcon mode={viewMode} />
                 Modo {viewMode === "librero" ? "Librero" : viewMode === "portadas" ? "Portadas" : "Lista"}
+                <svg className={styles.dropdownChevron} aria-hidden="true" viewBox="0 0 12 8">
+                  <path d="m1 1 5 5 5-5" />
+                </svg>
               </summary>
               <div className={styles.modeMenu}>
                 <button type="button" disabled={!render3D} onClick={(event) => { changeViewMode("librero"); event.currentTarget.closest("details")?.removeAttribute("open"); }}>
@@ -538,6 +544,7 @@ export default function BibliotecaDigital3DPage({
           </>
         )}
       </AnimatePresence>
+
     </main>
   );
 }

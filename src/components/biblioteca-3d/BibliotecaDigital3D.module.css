@@ -308,75 +308,108 @@
 }
 
 .roomTopbar {
-  display: grid;
-  gap: 16px;
-  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 150px;
+  margin-bottom: 30px;
+  padding: 24px 30px;
+  overflow: visible;
+  border: 1px solid rgba(138, 15, 46, 0.1);
+  border-radius: 18px;
+  background: linear-gradient(115deg, #fff 0%, #fffaf6 56%, #f7ebef 100%);
+  box-shadow: 0 14px 34px rgba(73, 35, 37, 0.1);
 }
 
 .roomTopbar > div {
   min-width: 0;
 }
 
-.roomTopbar span {
-  color: #7d1735;
-  font-size: 0.65rem;
-  letter-spacing: 0.16em;
+.roomIntro {
+  width: auto;
+}
+
+.roomEyebrow {
+  display: block;
+  color: #d49a5a;
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: 0.34em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
-.roomTopbar h1 {
-  width: min(1080px, 100%);
-  margin: 8px 0 0;
-  color: #10243b;
-  font-size: clamp(1.85rem, 2.35vw, 2.85rem);
-  font-weight: 620;
-  line-height: 1.06;
-  letter-spacing: 0;
+.roomTitleLine {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 6px;
 }
 
-.roomTopbar h1 .h1Accent {
-  padding-inline: 0.05em;
-  background: linear-gradient(to top, rgba(201, 162, 74, 0.34) 0 38%, transparent 38% 100%);
-  color: #7d1735;
-  font-size: 0.86em;
+.roomTopbar h1 {
+  margin: 0;
+  color: #10243b;
+  font-size: clamp(2rem, 2.75vw, 2.75rem);
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.roomSlash {
+  color: #d49a5a;
+  font-size: 2.9rem;
+  font-weight: 250;
+  line-height: 0.8;
+}
+
+.roomTitleLine em {
+  color: #8a0f2e;
+  font-size: 1.12rem;
   font-style: italic;
-  font-weight: 680;
+  font-weight: 650;
   white-space: nowrap;
+}
+
+.roomTitleLine em span {
+  color: #d49a5a;
+}
+
+.roomIntro > strong {
+  display: block;
+  color: #23394f;
+  margin-top: 5px;
+  font-size: 1.02rem;
+  font-weight: 650;
+  letter-spacing: 0.17em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .roomStats {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 14px;
-}
-
-.roomStats span {
-  color: #665a60;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-.roomStats b {
-  color: #7d1735;
-  font-size: 1rem;
+  gap: 20px;
+  margin-top: 0;
 }
 
 .documentCounter {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-height: 74px;
-  padding: 12px 18px;
-  border: 1px solid #eadbd2;
-  border-radius: 10px;
-  background: rgba(255, 252, 248, 0.92);
-  box-shadow: 0 8px 20px rgba(62, 35, 23, 0.06);
+  min-height: 80px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(62, 35, 23, 0.1);
 }
 
 .documentCounter svg {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   fill: none;
   stroke: #9b103d;
   stroke-linecap: round;
@@ -392,14 +425,16 @@
 
 .documentCounter strong {
   color: #9b103d;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 780;
 }
 
 .documentCounter small {
   margin-top: 2px;
   color: #5f5960;
-  font-size: 0.82rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 .modeDropdown {
@@ -413,14 +448,14 @@
   gap: 8px;
   width: 100%;
   box-sizing: border-box;
-  min-height: 36px;
-  padding: 0 12px;
+  min-height: 44px;
+  padding: 0 15px;
   border: 1px solid #8a0f2e;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #fff;
   cursor: pointer;
   font: inherit;
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   list-style: none;
   white-space: normal;
   line-height: 1.25;
@@ -428,6 +463,23 @@
 
 .modeDropdown summary::-webkit-details-marker {
   display: none;
+}
+
+.dropdownChevron {
+  width: 10px !important;
+  height: 7px !important;
+  margin-left: 2px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  transition: transform 0.16s ease;
+}
+
+.modeDropdown[open] .dropdownChevron {
+  transform: rotate(180deg);
 }
 
 .modeDropdown svg,
@@ -1068,8 +1120,11 @@
 .lightBookLogo {
   --logo-height: 17px;
   --logo-gap: 4px;
-  --logo-max-width: 104px;
   width: auto;
+  max-width: none;
+  padding: 5px 8px;
+  border-radius: 3px;
+  background: #fff;
 }
 
 .lightBooks strong {
@@ -1158,9 +1213,16 @@
   .roomTopbar {
     align-items: flex-start;
     flex-direction: column;
+    gap: 22px;
+    padding: 26px 22px;
+  }
+
+  .roomIntro {
+    width: auto;
   }
 
   .roomStats {
+    width: 100%;
     gap: 10px;
   }
 
@@ -1261,11 +1323,25 @@
   }
 
   .roomTopbar h1 {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 
-  .roomTopbar h1 .h1Accent {
-    white-space: normal;
+  .roomTitleLine {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .roomTopbar {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 0;
+    gap: 18px;
+    padding: 20px 18px;
+  }
+
+  .roomIntro {
+    width: 100%;
   }
 
   .roomStats {
