@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import DocumentWorkflowHeader from "@/components/document-workflow/DocumentWorkflowHeader";
 import WorkflowModal from "@/components/document-workflow/WorkflowModal";
 import styles from "@/components/document-workflow/DocumentWorkflow.module.css";
@@ -14,21 +14,12 @@ const tabs = [
   ["rejected", "Rechazados"],
 ];
 const PAGE_SIZE = 6;
-const RECOGNITION_FONT_MIN = 8;
-const RECOGNITION_FONT_MAX = 40;
-const RECOGNITION_FONT_DEFAULT = 24;
-
 function emailResultText(email) {
   if (!email) return "";
-  const certificate = email.recognition_certificate
-    ? email.recognition_certificate.generated
-      ? " Reconocimiento agregado."
-      : " Reconocimiento actualizado."
-    : "";
-  if (email.sent) return `${certificate} Correo enviado con éxito.`;
-  if (email.error) return `${certificate} Correo falló: ${email.error}`;
-  if (email.warning) return `${certificate} Correo falló: ${email.warning}.`;
-  return certificate;
+  if (email.sent) return " Correo enviado con éxito.";
+  if (email.error) return ` Correo falló: ${email.error}`;
+  if (email.warning) return ` Correo falló: ${email.warning}.`;
+  return "";
 }
 
 export default function ValidatorPanelPage() {
@@ -40,13 +31,9 @@ export default function ValidatorPanelPage() {
   const [loading, setLoading] = useState(true);
   const [modal, setModal] = useState(null);
   const [page, setPage] = useState(0);
-  const certificatePreviewRef = useRef(null);
-  const [certificatePreviewScale, setCertificatePreviewScale] = useState(0.25);
   const [reviewOptions, setReviewOptions] = useState({
     send_email: false,
     review_observations: "",
-    recipient_name: "",
-    name_font_size: RECOGNITION_FONT_DEFAULT,
   });
 
   useEffect(() => {
@@ -71,21 +58,10 @@ export default function ValidatorPanelPage() {
   const currentPage = Math.min(page, pageCount - 1);
   const visibleDocuments = documents.slice(currentPage * PAGE_SIZE, currentPage * PAGE_SIZE + PAGE_SIZE);
 
-  useEffect(() => {
-    if (!modal || modal.type !== "approve" || !certificatePreviewRef.current) return undefined;
-    const observer = new ResizeObserver(([entry]) => {
-      setCertificatePreviewScale(entry.contentRect.width / 792);
-    });
-    observer.observe(certificatePreviewRef.current);
-    return () => observer.disconnect();
-  }, [modal]);
-
   const confirmAction = (modalData) => {
     setReviewOptions({
       send_email: Boolean(modalData.resend),
       review_observations: "",
-      recipient_name: modalData.document?.full_name || "",
-      name_font_size: RECOGNITION_FONT_DEFAULT,
     });
     setModal(modalData);
   };
@@ -133,27 +109,6 @@ export default function ValidatorPanelPage() {
     } catch (requestError) {
       setError(requestError.message || "No se pudo reenviar la respuesta.");
     }
-  };
-
-  const downloadRecognition = async (document) => {
-    setError("");
-    let blob;
-    try {
-      blob = await apiBlobFetch(`/api/validator/documents/${document.id}/recognition-pdf/`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(reviewOptions),
-      });
-    } catch {
-      setError("No se pudo descargar el reconocimiento.");
-      return;
-    }
-    const url = URL.createObjectURL(blob);
-    const link = window.document.createElement("a");
-    link.href = url;
-    link.download = `reconocimiento-${document.folio || document.id}.pdf`;
-    link.click();
-    URL.revokeObjectURL(url);
   };
 
   const openPdf = async (document, download = false, fileType = "document") => {
@@ -211,29 +166,6 @@ export default function ValidatorPanelPage() {
                   />
                 </label>
               )}
-              {reviewOptions.send_email && modal.type === "approve" && (
-                <>
-                  <label className={styles.modalField}>
-                    Nombre de la persona reconocida
-                    <input
-                      type="text"
-                      value={reviewOptions.recipient_name}
-                      maxLength={160}
-                      onChange={(event) => setReviewOptions((current) => ({ ...current, recipient_name: event.target.value }))}
-                    />
-                  </label>
-                  <label className={styles.modalField}>
-                    Tamaño del nombre: {reviewOptions.name_font_size}px
-                    <input
-                      type="range"
-                      min={RECOGNITION_FONT_MIN}
-                      max={RECOGNITION_FONT_MAX}
-                      value={reviewOptions.name_font_size}
-                      onChange={(event) => setReviewOptions((current) => ({ ...current, name_font_size: Number(event.target.value) }))}
-                    />
-                  </label>
-                </>
-              )}
               {(reviewOptions.send_email || modal.resend) && modal.document && (
                 <div className={styles.emailPreview}>
                   <span>Vista previa del correo</span>
@@ -244,20 +176,7 @@ export default function ValidatorPanelPage() {
                       ? "fue aprobado para la Biblioteca Digital de Planeación."
                       : "fue rechazado."}
                   </p>
-                  {modal.type === "approve" && (
-                    <>
-                      <p>Folio: {modal.document.folio || "Sin folio"}</p>
-                      <div ref={certificatePreviewRef} className={styles.certificatePreview} aria-label="Vista previa del reconocimiento">
-                        <strong style={{ fontSize: `${Math.max(1, reviewOptions.name_font_size * certificatePreviewScale)}px` }}>
-                          {reviewOptions.recipient_name || modal.document.full_name}
-                        </strong>
-                      </div>
-                      <button className={styles.secondaryButton} type="button" onClick={() => downloadRecognition(modal.document)}>
-                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
-                        Descargar reconocimiento
-                      </button>
-                    </>
-                  )}
+                  {modal.type === "approve" && <p>Folio: {modal.document.folio || "Sin folio"}</p>}
                   {modal.type === "reject" && <p>Observaciones: {modal.document.review_observations || reviewOptions.review_observations || "Sin observaciones capturadas"}</p>}
                 </div>
               )}
@@ -430,24 +349,6 @@ export default function ValidatorPanelPage() {
                     >
                       <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4v6h6M20 20v-6h-6M5 15a7 7 0 0 0 12 3M19 9A7 7 0 0 0 7 6" /></svg>
                       Reenviar respuesta
-                    </button>
-                  )}
-                  {document.status === "approved" && (
-                    <button
-                      className={styles.secondaryButton}
-                      type="button"
-                      onClick={() => confirmAction({
-                        title: "Descargar reconocimiento",
-                        message: "Ajusta el nombre y tamaño antes de descargar. Se conserva el mismo folio del reconocimiento.",
-                        confirmLabel: "Cerrar",
-                        type: "approve",
-                        resend: true,
-                        document,
-                        onConfirm: () => setModal(null),
-                      })}
-                    >
-                      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM5 6H3a4 4 0 0 0 4 4M19 6h2a4 4 0 0 1-4 4" /></svg>
-                      Descargar reconocimiento
                     </button>
                   )}
                 </div>

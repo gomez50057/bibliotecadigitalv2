@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "Recognition DejaVu";
-  src: url("/fonts/DejaVuSans.ttf") format("truetype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Recognition DejaVu";
-  src: url("/fonts/DejaVuSans-Bold.ttf") format("truetype");
-  font-weight: 800;
-}
-
 .page {
   min-height: 100vh;
   background: #f5f3f5;
@@ -1162,30 +1150,6 @@
 .emailPreview strong {
   color: #10243b;
   font-size: 0.95rem;
-}
-
-.certificatePreview {
-  position: relative;
-  aspect-ratio: 792 / 612;
-  overflow: hidden;
-  border: 1px solid #e5d7bd;
-  border-radius: 6px;
-  background: url("/img/reconocimiento_base.jpg") center / cover no-repeat;
-}
-
-.certificatePreview strong {
-  position: absolute;
-  top: 55.2%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 53%;
-  color: #10243b;
-  font-family: "Recognition DejaVu", Arial, sans-serif;
-  font-weight: 800;
-  line-height: 1.1;
-  overflow: hidden;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .modalClose {
